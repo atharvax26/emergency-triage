@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { AlertTriangle, ArrowLeft, ShieldAlert } from "lucide-react";
+import { AlertTriangle, ArrowLeft, Mic, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { type TriageResult, severityConfig } from "@/lib/mock-data";
@@ -144,12 +145,29 @@ const Dashboard = () => {
           ) : (
             <div className="space-y-3">
               <Label className="text-base">Your Assessment</Label>
-              <Textarea
-                placeholder="Enter your clinical assessment..."
-                className="min-h-[100px] text-base"
-                value={overrideText}
-                onChange={(e) => setOverrideText(e.target.value)}
-              />
+              <div className="relative">
+                <Textarea
+                  placeholder="Enter your clinical assessment..."
+                  className="min-h-[100px] pr-14 text-base"
+                  value={overrideText}
+                  onChange={(e) => setOverrideText(e.target.value)}
+                />
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="icon"
+                        className="absolute right-2 top-2 h-10 w-10 text-muted-foreground hover:text-foreground"
+                      >
+                        <Mic className="h-5 w-5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>Coming soon</TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
               <div className="flex gap-3">
                 <Button className="h-12 text-base" disabled={!overrideText}>
                   Submit Override
