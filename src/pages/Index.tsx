@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { Mic, Upload } from "lucide-react";
+import { Mic, MicOff, Upload } from "lucide-react";
+import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -21,6 +22,18 @@ const Index = () => {
   });
   const [dragOver, setDragOver] = useState(false);
   const [files, setFiles] = useState<string[]>([]);
+
+  const onSpeechResult = useCallback(
+    (transcript: string) => {
+      setForm((f) => ({
+        ...f,
+        symptoms: f.symptoms ? `${f.symptoms} ${transcript}` : transcript,
+      }));
+    },
+    []
+  );
+
+  const speech = useSpeechRecognition({ onResult: onSpeechResult });
 
   const update = (field: keyof PatientIntake, value: string) =>
     setForm((f) => ({ ...f, [field]: value }));
@@ -95,11 +108,24 @@ const Index = () => {
               <Label htmlFor="symptoms" className="text-base">Symptoms</Label>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline" size="icon" className="h-10 w-10" type="button">
-                    <Mic className="h-5 w-5" />
+                  <Button
+                    variant={speech.isListening ? "destructive" : "outline"}
+                    size="icon"
+                    className="h-10 w-10"
+                    type="button"
+                    onClick={speech.toggle}
+                    disabled={!speech.isSupported}
+                  >
+                    {speech.isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent>Voice input — Coming soon</TooltipContent>
+                <TooltipContent>
+                  {!speech.isSupported
+                    ? "Voice input not supported in this browser"
+                    : speech.isListening
+                    ? "Stop listening"
+                    : "Start voice input"}
+                </TooltipContent>
               </Tooltip>
             </div>
             <Textarea

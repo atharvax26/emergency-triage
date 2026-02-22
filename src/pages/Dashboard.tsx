@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { AlertTriangle, ArrowLeft, Mic, ShieldAlert } from "lucide-react";
+import { AlertTriangle, ArrowLeft, Mic, MicOff, ShieldAlert } from "lucide-react";
+import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -19,6 +20,15 @@ const Dashboard = () => {
   const [actions, setActions] = useState(result?.actions ?? []);
   const [overrideOpen, setOverrideOpen] = useState(false);
   const [overrideText, setOverrideText] = useState("");
+
+  const onSpeechResult = useCallback(
+    (transcript: string) => {
+      setOverrideText((prev) => (prev ? `${prev} ${transcript}` : transcript));
+    },
+    []
+  );
+
+  const speech = useSpeechRecognition({ onResult: onSpeechResult });
 
   if (!result) {
     return (
@@ -157,14 +167,22 @@ const Dashboard = () => {
                     <TooltipTrigger asChild>
                       <Button
                         type="button"
-                        variant="ghost"
+                        variant={speech.isListening ? "destructive" : "ghost"}
                         size="icon"
                         className="absolute right-2 top-2 h-10 w-10 text-muted-foreground hover:text-foreground"
+                        onClick={speech.toggle}
+                        disabled={!speech.isSupported}
                       >
-                        <Mic className="h-5 w-5" />
+                        {speech.isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent>Coming soon</TooltipContent>
+                    <TooltipContent>
+                      {!speech.isSupported
+                        ? "Voice input not supported in this browser"
+                        : speech.isListening
+                        ? "Stop listening"
+                        : "Start voice input"}
+                    </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
               </div>
