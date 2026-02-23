@@ -8,6 +8,7 @@ import { useAuth } from "./hooks/use-auth";
 import Login from "./pages/Login";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
+import Queue from "./pages/Queue";
 import AuditLog from "./pages/AuditLog";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +24,7 @@ function ProtectedLayout() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/queue" element={<Queue />} />
         <Route path="/audit" element={<AuditLog />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

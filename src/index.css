@@ -4,103 +4,103 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 220 20% 10%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 220 60% 20%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 220 100% 25%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 220 14% 92%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary-foreground: 0 0% 0%;
 
     --muted: 220 14% 92%;
-    --muted-foreground: 220 10% 46%;
+    --muted-foreground: 0 0% 30%;
 
     --accent: 220 14% 92%;
-    --accent-foreground: 220 20% 10%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84% 50%;
+    --destructive: 0 100% 40%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 87%;
-    --input: 220 13% 87%;
-    --ring: 220 60% 20%;
+    --border: 0 0% 70%;
+    --input: 0 0% 70%;
+    --ring: 220 100% 25%;
 
     --radius: 0.5rem;
 
-    /* Severity tokens */
-    --severity-critical: 0 84% 50%;
+    /* Severity tokens - High contrast */
+    --severity-critical: 0 100% 40%;
     --severity-critical-foreground: 0 0% 100%;
-    --severity-high: 25 95% 53%;
+    --severity-high: 33 100% 40%;
     --severity-high-foreground: 0 0% 100%;
-    --severity-medium: 45 93% 47%;
-    --severity-medium-foreground: 0 0% 10%;
-    --severity-low: 142 71% 35%;
+    --severity-medium: 48 100% 35%;
+    --severity-medium-foreground: 0 0% 0%;
+    --severity-low: 142 100% 25%;
     --severity-low-foreground: 0 0% 100%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 220 100% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 92%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 70%;
+    --sidebar-ring: 220 100% 25%;
   }
 
   .dark {
-    --background: 220 20% 7%;
-    --foreground: 210 20% 92%;
+    --background: 0 0% 10%;
+    --foreground: 0 0% 100%;
 
-    --card: 220 20% 10%;
-    --card-foreground: 210 20% 92%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 210 20% 92%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 92%;
-    --primary-foreground: 220 20% 7%;
+    --primary: 210 100% 70%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 220 14% 16%;
-    --secondary-foreground: 210 20% 92%;
+    --secondary: 220 14% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 14% 16%;
-    --muted-foreground: 215 15% 60%;
+    --muted: 220 14% 20%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 220 14% 16%;
-    --accent-foreground: 210 20% 92%;
+    --accent: 220 14% 20%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 45%;
+    --destructive: 0 100% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 14% 18%;
-    --input: 220 14% 18%;
-    --ring: 210 20% 70%;
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
+    --ring: 210 100% 70%;
 
-    /* Severity tokens - brighter for dark mode */
-    --severity-critical: 0 90% 58%;
+    /* Severity tokens - High contrast for dark mode */
+    --severity-critical: 0 100% 60%;
     --severity-critical-foreground: 0 0% 100%;
-    --severity-high: 25 100% 58%;
+    --severity-high: 33 100% 60%;
     --severity-high-foreground: 0 0% 100%;
-    --severity-medium: 45 100% 55%;
-    --severity-medium-foreground: 0 0% 10%;
-    --severity-low: 142 76% 45%;
+    --severity-medium: 48 100% 60%;
+    --severity-medium-foreground: 0 0% 0%;
+    --severity-low: 142 100% 50%;
     --severity-low-foreground: 0 0% 100%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 210 100% 70%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 220 14% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 30%;
+    --sidebar-ring: 210 100% 70%;
   }
 }
 
@@ -111,5 +111,47 @@
 
   body {
     @apply bg-background text-foreground;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Disable all animations and transitions */
+  *, *::before, *::after {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+
+  /* Minimum touch target size (44x44px per WCAG) */
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Focus indicators for keyboard navigation */
+  *:focus-visible {
+    outline: 3px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* High contrast borders */
+  .border {
+    border-width: 2px;
+  }
+}
+
+@layer utilities {
+  /* Touch-friendly spacing */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px;
+  }
+
+  /* High contrast text */
+  .text-high-contrast {
+    color: hsl(var(--foreground));
+    font-weight: 600;
   }
 }

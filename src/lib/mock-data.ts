@@ -11,6 +11,8 @@ export interface PatientIntake {
 export interface TriageResult {
   patient: PatientIntake;
   severity: SeverityLevel;
+  confidence: number;
+  reasoningFactors: string[];
   recommendation: string;
   actions: { id: string; text: string; checked: boolean }[];
   escalation: boolean;
@@ -37,12 +39,41 @@ export function getMockTriageResult(intake: PatientIntake): TriageResult {
   // Simulate severity based on keywords
   const text = `${intake.chiefComplaint} ${intake.symptoms}`.toLowerCase();
   let severity: SeverityLevel = "low";
+  let confidence = 85;
+  let reasoningFactors: string[] = [];
+
   if (text.includes("chest pain") || text.includes("unconscious") || text.includes("breathing") || text.includes("cardiac")) {
     severity = "critical";
+    confidence = 94;
+    reasoningFactors = [
+      "Chest pain indicates potential cardiac emergency",
+      "Respiratory distress requires immediate intervention",
+      "Symptoms align with life-threatening conditions"
+    ];
   } else if (text.includes("fracture") || text.includes("bleeding") || text.includes("head injury")) {
     severity = "high";
+    confidence = 89;
+    reasoningFactors = [
+      "Traumatic injury requires urgent assessment",
+      "Risk of complications if delayed",
+      "Patient stability needs immediate evaluation"
+    ];
   } else if (text.includes("fever") || text.includes("vomiting") || text.includes("abdominal")) {
     severity = "medium";
+    confidence = 82;
+    reasoningFactors = [
+      "Symptoms suggest moderate medical concern",
+      "Requires diagnostic workup within 1 hour",
+      "No immediate life-threatening indicators"
+    ];
+  } else {
+    severity = "low";
+    confidence = 78;
+    reasoningFactors = [
+      "Symptoms indicate non-urgent condition",
+      "No critical warning signs detected",
+      "Standard evaluation protocol appropriate"
+    ];
   }
 
   const actionSets: Record<SeverityLevel, string[]> = {
@@ -82,6 +113,8 @@ export function getMockTriageResult(intake: PatientIntake): TriageResult {
   return {
     patient: intake,
     severity,
+    confidence,
+    reasoningFactors,
     recommendation: recommendations[severity],
     actions: actionSets[severity].map((text, i) => ({ id: `action-${i}`, text, checked: false })),
     escalation: severity === "critical",

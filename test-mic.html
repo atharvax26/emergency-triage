@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Microphone Test</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; }
+        #status { margin: 20px 0; padding: 10px; background: #f0f0f0; }
+        .recording { background: #ffcccc; }
+    </style>
+</head>
+<body>
+    <h1>Speech Recognition Test</h1>
+    <button id="startBtn">Start Recording</button>
+    <button id="stopBtn">Stop Recording</button>
+    <div id="status">Status: Ready</div>
+    <div id="interim" style="color: gray; font-style: italic;"></div>
+    <div id="final" style="margin-top: 10px; font-weight: bold;"></div>
+
+    <script>
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const status = document.getElementById('status');
+        const interim = document.getElementById('interim');
+        const final = document.getElementById('final');
+
+        if (!SpeechRecognition) {
+            status.textContent = 'Speech Recognition NOT supported in this browser!';
+            status.style.background = '#ffcccc';
+        } else {
+            status.textContent = 'Speech Recognition is supported!';
+            status.style.background = '#ccffcc';
+
+            const recognition = new SpeechRecognition();
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.lang = 'en-US';
+
+            recognition.onstart = () => {
+                status.textContent = 'Status: Recording...';
+                status.classList.add('recording');
+                console.log('Started');
+            };
+
+            recognition.onresult = (event) => {
+                console.log('Result event:', event);
+                let interimText = '';
+                let finalText = '';
+
+                for (let i = event.resultIndex; i < event.results.length; i++) {
+                    const transcript = event.results[i][0].transcript;
+                    if (event.results[i].isFinal) {
+                        finalText += transcript + ' ';
+                    } else {
+                        interimText += transcript;
+                    }
+                }
+
+                interim.textContent = 'Detecting: ' + interimText;
+                if (finalText) {
+                    final.textContent += finalText;
+                }
+            };
+
+            recognition.onerror = (event) => {
+                console.error('Error:', event.error);
+                status.textContent = 'Error: ' + event.error;
+                status.style.background = '#ffcccc';
+                status.classList.remove('recording');
+            };
+
+            recognition.onend = () => {
+                status.textContent = 'Status: Stopped';
+                status.classList.remove('recording');
+                console.log('Ended');
+            };
+
+            startBtn.onclick = () => {
+                try {
+                    recognition.start();
+                } catch (e) {
+                    console.error('Start error:', e);
+                    status.textContent = 'Error starting: ' + e.message;
+                }
+            };
+
+            stopBtn.onclick = () => {
+                recognition.stop();
+            };
+        }
+    </script>
+</body>
+</html>

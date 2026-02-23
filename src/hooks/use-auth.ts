@@ -1,6 +1,6 @@
 import { useState, useEffect, useSyncExternalStore } from "react";
 
-export type UserRole = "nurse" | "doctor";
+export type UserRole = "nurse" | "doctor" | "admin";
 
 export interface AuthUser {
   name: string;

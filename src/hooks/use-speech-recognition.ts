@@ -8,6 +8,7 @@ const SpeechRecognitionAPI: any =
 
 interface UseSpeechRecognitionOptions {
   onResult: (transcript: string) => void;
+  onInterimResult?: (transcript: string) => void;
   continuous?: boolean;
   lang?: string;
 }
@@ -15,16 +16,19 @@ interface UseSpeechRecognitionOptions {
 interface SpeechRecognitionResult {
   isListening: boolean;
   isSupported: boolean;
+  interimTranscript: string;
   toggle: () => void;
   stop: () => void;
 }
 
 export function useSpeechRecognition({
   onResult,
+  onInterimResult,
   continuous = true,
   lang = "en-US",
 }: UseSpeechRecognitionOptions): SpeechRecognitionResult {
   const [isListening, setIsListening] = useState(false);
+  const [interimTranscript, setInterimTranscript] = useState("");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recognitionRef = useRef<any>(null);
 
@@ -33,40 +37,82 @@ export function useSpeechRecognition({
   const stop = useCallback(() => {
     recognitionRef.current?.stop();
     setIsListening(false);
+    setInterimTranscript("");
   }, []);
 
   const toggle = useCallback(() => {
-    if (!SpeechRecognitionAPI) return;
+    if (!SpeechRecognitionAPI) {
+      console.error('Speech Recognition API not supported');
+      return;
+    }
 
     if (isListening) {
       stop();
       return;
     }
 
-    const recognition = new SpeechRecognitionAPI();
-    recognition.continuous = continuous;
-    recognition.interimResults = false;
-    recognition.lang = lang;
+    try {
+      const recognition = new SpeechRecognitionAPI();
+      recognition.continuous = continuous;
+      recognition.interimResults = true;
+      recognition.lang = lang;
 
-    recognition.onresult = (event: any) => {
-      const last = event.results[event.results.length - 1];
-      if (last.isFinal) {
-        onResult(last[0].transcript);
-      }
-    };
+      recognition.onstart = () => {
+        console.log('Speech recognition started');
+        setIsListening(true);
+      };
 
-    recognition.onerror = () => {
+      recognition.onresult = (event: any) => {
+        console.log('Speech recognition result:', event);
+        let interimText = "";
+        let finalText = "";
+
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          const transcript = event.results[i][0].transcript;
+          console.log(`Result ${i}: ${transcript}, isFinal: ${event.results[i].isFinal}`);
+          
+          if (event.results[i].isFinal) {
+            finalText += transcript;
+          } else {
+            interimText += transcript;
+          }
+        }
+
+        if (interimText) {
+          console.log('Interim text:', interimText);
+          setInterimTranscript(interimText);
+          if (onInterimResult) {
+            onInterimResult(interimText);
+          }
+        }
+
+        if (finalText.trim()) {
+          console.log('Final text:', finalText);
+          setInterimTranscript("");
+          onResult(finalText.trim());
+        }
+      };
+
+      recognition.onerror = (event: any) => {
+        console.error('Speech recognition error:', event.error, event);
+        setIsListening(false);
+        setInterimTranscript("");
+      };
+
+      recognition.onend = () => {
+        console.log('Speech recognition ended');
+        setIsListening(false);
+        setInterimTranscript("");
+      };
+
+      recognitionRef.current = recognition;
+      console.log('Starting speech recognition...');
+      recognition.start();
+    } catch (error) {
+      console.error('Failed to start speech recognition:', error);
       setIsListening(false);
-    };
-
-    recognition.onend = () => {
-      setIsListening(false);
-    };
-
-    recognitionRef.current = recognition;
-    recognition.start();
-    setIsListening(true);
-  }, [SpeechRecognitionAPI, isListening, continuous, lang, onResult, stop]);
+    }
+  }, [isListening, continuous, lang, onResult, onInterimResult, stop]);
 
   useEffect(() => {
     return () => {
@@ -74,5 +120,5 @@ export function useSpeechRecognition({
     };
   }, []);
 
-  return { isListening, isSupported, toggle, stop };
+  return { isListening, isSupported, interimTranscript, toggle, stop };
 }

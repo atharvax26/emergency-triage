@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Activity, Stethoscope, HeartPulse } from "lucide-react";
+import { Activity, Stethoscope, HeartPulse, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,6 +20,12 @@ const roles: { value: UserRole; label: string; icon: React.ReactNode; descriptio
     label: "Doctor",
     icon: <Stethoscope className="h-8 w-8" />,
     description: "Full dashboard & override access",
+  },
+  {
+    value: "admin",
+    label: "Admin",
+    icon: <Shield className="h-8 w-8" />,
+    description: "System management & audit logs",
   },
 ];
 
@@ -68,21 +74,21 @@ const Login = () => {
           {/* Role selection */}
           <div className="space-y-2">
             <Label className="text-base">Select Role</Label>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-3">
               {roles.map((role) => (
                 <button
                   key={role.value}
                   type="button"
                   onClick={() => setSelectedRole(role.value)}
                   className={cn(
-                    "flex flex-col items-center gap-2 rounded-lg border-2 p-4 text-center transition-colors",
+                    "flex flex-col items-center gap-2 rounded-lg border-2 p-4 text-center",
                     selectedRole === role.value
                       ? "border-primary bg-primary/10 text-foreground"
                       : "border-border text-muted-foreground hover:border-primary/50 hover:bg-accent"
                   )}
                 >
                   {role.icon}
-                  <span className="text-base font-semibold">{role.label}</span>
+                  <span className="text-sm font-semibold">{role.label}</span>
                   <span className="text-xs">{role.description}</span>
                 </button>
               ))}

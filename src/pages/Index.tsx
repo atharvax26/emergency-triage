@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { Mic, MicOff, Upload } from "lucide-react";
+import { Mic, MicOff, Upload, ShieldAlert } from "lucide-react";
 import { useSpeechRecognition } from "@/hooks/use-speech-recognition";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,10 +9,16 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { getMockTriageResult, type PatientIntake } from "@/lib/mock-data";
+import { TriageProcessing } from "@/components/TriageProcessing";
+import { ConfirmationDialog } from "@/components/ConfirmationDialog";
+import { useAuth } from "@/hooks/use-auth";
+import { hasPermission } from "@/lib/permissions";
 
 const Index = () => {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [form, setForm] = useState<PatientIntake>({
     name: "",
     age: "",
@@ -22,6 +28,12 @@ const Index = () => {
   });
   const [dragOver, setDragOver] = useState(false);
   const [files, setFiles] = useState<string[]>([]);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [triageResult, setTriageResult] = useState<ReturnType<typeof getMockTriageResult> | null>(null);
+  const [emergencyActivated, setEmergencyActivated] = useState(false);
+  const [showEmergencyConfirm, setShowEmergencyConfirm] = useState(false);
+
+  const canActivateEmergency = hasPermission(user?.role, "canActivateEmergency");
 
   const onSpeechResult = useCallback(
     (transcript: string) => {
@@ -43,7 +55,24 @@ const Index = () => {
   const handleSubmit = () => {
     if (!canSubmit) return;
     const result = getMockTriageResult(form);
-    navigate("/dashboard", { state: { result } });
+    setTriageResult(result);
+    setIsProcessing(true);
+  };
+
+  const handleProcessingComplete = () => {
+    setIsProcessing(false);
+    if (triageResult) {
+      navigate("/dashboard", { state: { result: triageResult } });
+    }
+  };
+
+  const handleEmergency = () => {
+    setShowEmergencyConfirm(true);
+  };
+
+  const confirmEmergency = () => {
+    setEmergencyActivated(true);
+    console.log('EMERGENCY ACTIVATED during intake');
   };
 
   const handleDrop = (e: React.DragEvent) => {
@@ -61,12 +90,57 @@ const Index = () => {
   };
 
   return (
-    <main className="container max-w-2xl py-8">
-      <h1 className="mb-8 text-3xl font-bold">Patient Intake</h1>
+    <>
+      {isProcessing && <TriageProcessing onComplete={handleProcessingComplete} />}
+      
+      <main id="main-content" className="container max-w-2xl py-8" role="main">
+        {/* Header with Emergency Button */}
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-3xl font-bold">Patient Intake</h1>
+          
+          {canActivateEmergency && (
+            <Button
+              onClick={handleEmergency}
+              disabled={emergencyActivated}
+              size="lg"
+              className={`h-14 px-8 text-base font-bold ${
+                emergencyActivated
+                  ? 'bg-muted text-muted-foreground cursor-not-allowed'
+                  : 'bg-red-600 hover:bg-red-700 text-white'
+              }`}
+              aria-label={emergencyActivated ? "Emergency response activated" : "Activate emergency response"}
+            >
+              {emergencyActivated ? (
+                <>
+                  <svg className="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  EMERGENCY ACTIVATED
+                </>
+              ) : (
+                <>
+                  <ShieldAlert className="mr-2 h-5 w-5" aria-hidden="true" />
+                  CODE BLUE / EMERGENCY
+                </>
+              )}
+            </Button>
+          )}
+        </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl">Patient Information</CardTitle>
+        {/* Emergency Confirmation Banner */}
+        {emergencyActivated && (
+          <Alert className="border-2 border-red-600 bg-red-50 dark:bg-red-950 mb-6">
+            <ShieldAlert className="h-6 w-6 text-red-600" />
+            <AlertTitle className="text-lg font-bold text-red-600">Emergency Response Activated</AlertTitle>
+            <AlertDescription className="text-base text-red-600">
+              Trauma/cardiac team has been alerted. Attending physician notified STAT. Emergency protocols initiated.
+            </AlertDescription>
+          </Alert>
+        )}
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl">Patient Information</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           {/* Name & Age row */}
@@ -128,6 +202,21 @@ const Index = () => {
                 </TooltipContent>
               </Tooltip>
             </div>
+            
+            {speech.isListening && (
+              <div className="flex items-center gap-2 rounded-md bg-red-50 dark:bg-red-950 px-3 py-2 text-sm text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800">
+                <div className="flex gap-1">
+                  <span className="inline-block h-2 w-2 rounded-full bg-red-500"></span>
+                  <span className="inline-block h-2 w-2 rounded-full bg-red-500"></span>
+                  <span className="inline-block h-2 w-2 rounded-full bg-red-500"></span>
+                </div>
+                <span className="font-medium">Recording...</span>
+                {speech.interimTranscript && (
+                  <span className="text-muted-foreground italic">"{speech.interimTranscript}"</span>
+                )}
+              </div>
+            )}
+            
             <Textarea
               id="symptoms"
               placeholder="Describe all symptoms in detail..."
@@ -167,14 +256,28 @@ const Index = () => {
           <Button
             onClick={handleSubmit}
             disabled={!canSubmit}
-            className="h-14 w-full text-lg font-bold"
+            className="h-16 w-full text-xl font-bold"
             size="lg"
+            aria-label="Analyze patient and generate triage assessment"
           >
             Analyze Patient
           </Button>
         </CardContent>
       </Card>
+
+      {/* Confirmation Dialog */}
+      <ConfirmationDialog
+        open={showEmergencyConfirm}
+        onOpenChange={setShowEmergencyConfirm}
+        onConfirm={confirmEmergency}
+        title="Activate Emergency Response?"
+        description="This will immediately alert the trauma/cardiac team and notify the attending physician STAT. Emergency protocols will be initiated. Are you sure you want to proceed?"
+        confirmText="YES, ACTIVATE EMERGENCY"
+        cancelText="Cancel"
+        variant="destructive"
+      />
     </main>
+    </>
   );
 };
 
