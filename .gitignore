@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Development artifacts
+.lovable/
+test-mic.html
+bun.lockb
