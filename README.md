@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# Emergency Triage Assistant
 
-## Project info
+A high-contrast, emergency-first triage UI designed for nurses and ER staff. Features zero clutter, large buttons, and fast usability with both dark and light theme support.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- **Emergency Intake**: Patient information form with symptom input and voice recognition support
+- **Triage Dashboard**: AI-powered severity assessment with color-coded alerts (Critical/High/Medium/Low)
+- **Audit Log**: Complete history of triage events and decisions
+- **Accessibility**: High-contrast design, large touch targets, glove-friendly interface
+- **Theme Support**: Dark and light modes optimized for emergency environments
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **React** with TypeScript
+- **Vite** for fast development and building
+- **Tailwind CSS** for styling
+- **shadcn/ui** component library
+- **Vitest** for testing
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v16 or higher)
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd emergency-triage
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Windows Quick Start
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+For Windows users, simply run the included batch file:
 
-**Use GitHub Codespaces**
+```sh
+start-dev.bat
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This will automatically install dependencies (if needed) and start the development server.
 
-## What technologies are used for this project?
+## Available Scripts
 
-This project is built with:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run test` - Run tests
+- `npm run lint` - Lint code
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
+```
+emergency-triage/
+├── src/
+│   ├── components/     # React components
+│   ├── hooks/          # Custom React hooks
+│   ├── lib/            # Utilities and mock data
+│   ├── pages/          # Page components
+│   └── test/           # Test files
+├── public/             # Static assets
+└── start-dev.bat       # Windows quick start script
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Accessibility
 
-## Can I connect a custom domain to my Lovable project?
+This application follows accessibility best practices with:
+- High contrast color schemes
+- Large, touch-friendly buttons
+- Keyboard navigation support
+- Screen reader compatibility
 
-Yes, you can!
+See [ACCESSIBILITY.md](ACCESSIBILITY.md) for detailed information.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+[Add your license here]
