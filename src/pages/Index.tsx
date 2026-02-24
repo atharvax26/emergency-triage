@@ -178,15 +178,32 @@ const Index = () => {
 
           {/* Symptoms with Mic */}
           <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <Label htmlFor="symptoms" className="text-base">Symptoms</Label>
+            <Label htmlFor="symptoms" className="text-base">Symptoms</Label>
+            <div className="relative">
+              <Textarea
+                id="symptoms"
+                placeholder="Describe all symptoms in detail..."
+                className="min-h-[120px] pr-14 text-base"
+                value={form.symptoms}
+                onChange={(e) => update("symptoms", e.target.value)}
+              />
+              {speech.isListening && (
+                <div className="absolute left-2 bottom-2 flex items-center gap-2 rounded-md bg-red-50 dark:bg-red-950 px-2 py-1 text-xs text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800">
+                  <div className="flex gap-1">
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                  </div>
+                  <span className="font-medium">Recording</span>
+                </div>
+              )}
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button
-                    variant={speech.isListening ? "destructive" : "outline"}
-                    size="icon"
-                    className="h-10 w-10"
                     type="button"
+                    variant={speech.isListening ? "destructive" : "ghost"}
+                    size="icon"
+                    className="absolute right-2 top-2 h-10 w-10"
                     onClick={speech.toggle}
                     disabled={!speech.isSupported}
                   >
@@ -202,28 +219,6 @@ const Index = () => {
                 </TooltipContent>
               </Tooltip>
             </div>
-            
-            {speech.isListening && (
-              <div className="flex items-center gap-2 rounded-md bg-red-50 dark:bg-red-950 px-3 py-2 text-sm text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800">
-                <div className="flex gap-1">
-                  <span className="inline-block h-2 w-2 rounded-full bg-red-500"></span>
-                  <span className="inline-block h-2 w-2 rounded-full bg-red-500"></span>
-                  <span className="inline-block h-2 w-2 rounded-full bg-red-500"></span>
-                </div>
-                <span className="font-medium">Recording...</span>
-                {speech.interimTranscript && (
-                  <span className="text-muted-foreground italic">"{speech.interimTranscript}"</span>
-                )}
-              </div>
-            )}
-            
-            <Textarea
-              id="symptoms"
-              placeholder="Describe all symptoms in detail..."
-              className="min-h-[120px] text-base"
-              value={form.symptoms}
-              onChange={(e) => update("symptoms", e.target.value)}
-            />
           </div>
 
           {/* File Upload */}
