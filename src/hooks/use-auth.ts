@@ -9,7 +9,7 @@ export interface AuthUser {
   token: string;
 }
 
-const API = "http://localhost:8000/api/v1/auth";
+const API = `${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/v1/auth`;
 const TOKEN_KEY = "triage_token";
 
 // ── Active session ────────────────────────────────────────────────────────────
