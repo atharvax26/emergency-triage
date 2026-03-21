@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 export function useTheme() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     if (typeof window !== "undefined") {
-      return document.documentElement.classList.contains("dark") ? "dark" : "light";
+      const stored = localStorage.getItem("theme") as "light" | "dark" | null;
+      if (stored) return stored;
+      // Default to dark
+      return "dark";
     }
     return "dark";
   });
@@ -15,6 +18,7 @@ export function useTheme() {
     } else {
       root.classList.remove("dark");
     }
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggle = () => setTheme((t) => (t === "dark" ? "light" : "dark"));

@@ -16,6 +16,7 @@ interface OverridePanelProps {
   patientId: string;
   patientName: string;
   currentSeverity: string;
+  doctorEmail: string;
   onSubmit: (data: OverrideData) => void;
   onCancel: () => void;
 }
@@ -26,7 +27,7 @@ export interface OverrideData {
   clinicalJustification: string;
   doctorName: string;
   doctorId: string;
-  doctorPin: string;
+  doctorPassword: string;
   timestamp: string;
 }
 
@@ -45,11 +46,14 @@ export function OverridePanel({
   patientId,
   patientName,
   currentSeverity,
+  doctorEmail,
   onSubmit,
   onCancel,
 }: OverridePanelProps) {
   const [step, setStep] = useState<"form" | "auth">("form");
   const [showConfirm, setShowConfirm] = useState(false);
+  const [authError, setAuthError] = useState("");
+  const [verifying, setVerifying] = useState(false);
   
   // Form data
   const [newSeverity, setNewSeverity] = useState("");
@@ -59,7 +63,7 @@ export function OverridePanel({
   // Auth data
   const [doctorName, setDoctorName] = useState("");
   const [doctorId, setDoctorId] = useState("");
-  const [doctorPin, setDoctorPin] = useState("");
+  const [doctorPassword, setDoctorPassword] = useState("");
 
   const onSpeechResult = useCallback(
     (transcript: string) => {
@@ -71,14 +75,33 @@ export function OverridePanel({
   const speech = useSpeechRecognition({ onResult: onSpeechResult });
 
   const canProceedToAuth = newSeverity && reason && justification.length >= 20;
-  const canSubmit = doctorName && doctorId && doctorPin.length === 4;
+  const canSubmit = doctorName && doctorId && doctorPassword.length >= 1;
 
   const handleProceedToAuth = () => {
+    setAuthError("");
     setStep("auth");
   };
 
-  const handleSubmitOverride = () => {
-    setShowConfirm(true);
+  const handleSubmitOverride = async () => {
+    setAuthError("");
+    setVerifying(true);
+    try {
+      const res = await fetch("http://localhost:8000/api/v1/auth/verify-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: doctorEmail, password: doctorPassword }),
+      });
+      const data = await res.json();
+      if (!data.valid) {
+        setAuthError("Incorrect password. Please try again.");
+        return;
+      }
+      setShowConfirm(true);
+    } catch {
+      setAuthError("Could not verify password. Check your connection.");
+    } finally {
+      setVerifying(false);
+    }
   };
 
   const confirmSubmit = () => {
@@ -88,7 +111,7 @@ export function OverridePanel({
       clinicalJustification: justification,
       doctorName,
       doctorId,
-      doctorPin,
+      doctorPassword,
       timestamp: new Date().toISOString(),
     };
     onSubmit(data);
@@ -301,21 +324,23 @@ export function OverridePanel({
                 />
               </div>
 
-              {/* PIN */}
+              {/* Password */}
               <div className="space-y-2">
-                <Label htmlFor="doctorPin" className="text-base flex items-center gap-2">
+                <Label htmlFor="doctorPassword" className="text-base flex items-center gap-2">
                   <Lock className="h-4 w-4" />
-                  4-Digit PIN
+                  Password
                 </Label>
                 <Input
-                  id="doctorPin"
+                  id="doctorPassword"
                   type="password"
-                  placeholder="••••"
-                  maxLength={4}
-                  className="h-12 text-base font-mono text-center text-2xl tracking-widest"
-                  value={doctorPin}
-                  onChange={(e) => setDoctorPin(e.target.value.replace(/\D/g, ""))}
+                  placeholder="Enter your login password"
+                  className="h-12 text-base"
+                  value={doctorPassword}
+                  onChange={(e) => setDoctorPassword(e.target.value)}
                 />
+                {authError && (
+                  <p className="text-sm text-red-500 font-medium">{authError}</p>
+                )}
               </div>
 
               {/* Actions */}
@@ -325,10 +350,10 @@ export function OverridePanel({
                 </Button>
                 <Button
                   onClick={handleSubmitOverride}
-                  disabled={!canSubmit}
+                  disabled={!canSubmit || verifying}
                   className="h-12 text-base flex-1 bg-severity-high hover:bg-severity-high/90"
                 >
-                  Submit Override
+                  {verifying ? "Verifying..." : "Submit Override"}
                 </Button>
               </div>
             </div>

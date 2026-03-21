@@ -90,7 +90,7 @@
     --severity-high-foreground: 0 0% 100%;
     --severity-medium: 48 100% 60%;
     --severity-medium-foreground: 0 0% 0%;
-    --severity-low: 142 100% 50%;
+    --severity-low: 142 45% 35%;
     --severity-low-foreground: 0 0% 100%;
 
     --sidebar-background: 0 0% 15%;
@@ -121,6 +121,28 @@
     animation-delay: 0s !important;
     transition-duration: 0s !important;
     transition-delay: 0s !important;
+  }
+
+  /* Escape hatch — elements that need real animation */
+  .allow-animation, .allow-animation * {
+    animation-duration: revert !important;
+    animation-delay: revert !important;
+    transition-duration: revert !important;
+    transition-delay: revert !important;
+  }
+
+  /* Dashboard animations escape hatch */
+  .dash-animate {
+    animation-duration: revert !important;
+    animation-delay: revert !important;
+    transition-duration: revert !important;
+    transition-delay: revert !important;
+  }
+  .dash-animate *, .dash-animate *::before, .dash-animate *::after {
+    animation-duration: revert !important;
+    animation-delay: revert !important;
+    transition-duration: revert !important;
+    transition-delay: revert !important;
   }
 
   /* Minimum touch target size (44x44px per WCAG) */
@@ -154,4 +176,146 @@
     color: hsl(var(--foreground));
     font-weight: 600;
   }
+}
+
+/* ── Dashboard animations ──────────────────────────────────────────────────── */
+@keyframes dash-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dash-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes dash-count-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes dash-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes dash-zap-spin {
+  0%   { transform: rotate(-15deg) scale(1); }
+  50%  { transform: rotate(15deg) scale(1.2); }
+  100% { transform: rotate(-15deg) scale(1); }
+}
+
+@keyframes dash-bar-grow {
+  from { width: 0%; }
+  to   { width: var(--bar-width, 100%); }
+}
+
+.dash-fade-up {
+  animation: dash-fade-up 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.dash-fade-in {
+  animation: dash-fade-in 0.35s ease both;
+}
+
+.dash-count-in {
+  animation: dash-count-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Staggered children */
+.dash-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.dash-stagger > *:nth-child(2) { animation-delay: 60ms; }
+.dash-stagger > *:nth-child(3) { animation-delay: 120ms; }
+.dash-stagger > *:nth-child(4) { animation-delay: 180ms; }
+.dash-stagger > *:nth-child(5) { animation-delay: 240ms; }
+.dash-stagger > *:nth-child(6) { animation-delay: 300ms; }
+
+/* Stat card hover — glowing border + lift */
+.dash-stat-card {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+.dash-stat-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 30px -8px rgba(0,0,0,0.35), 0 0 0 1px hsl(var(--primary) / 0.3);
+}
+
+/* Metric tile hover */
+.dash-metric-tile {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+.dash-metric-tile:hover {
+  transform: translateY(-3px) scale(1.015);
+}
+
+/* Yellow glow tile */
+.dash-metric-tile-yellow:hover {
+  background-color: rgb(234 179 8 / 0.18);
+  border-color: rgb(234 179 8 / 0.5);
+  box-shadow: 0 4px 20px -4px rgb(234 179 8 / 0.3);
+}
+
+/* Green glow tile */
+.dash-metric-tile-green:hover {
+  background-color: rgb(34 197 94 / 0.12);
+  border-color: rgb(34 197 94 / 0.4);
+  box-shadow: 0 4px 20px -4px rgb(34 197 94 / 0.25);
+}
+
+/* Blue glow tile */
+.dash-metric-tile-blue:hover {
+  background-color: rgb(59 130 246 / 0.12);
+  border-color: rgb(59 130 246 / 0.4);
+  box-shadow: 0 4px 20px -4px rgb(59 130 246 / 0.25);
+}
+
+/* Neutral tile */
+.dash-metric-tile-neutral:hover {
+  background-color: hsl(var(--muted) / 0.6);
+  box-shadow: 0 4px 16px -4px rgba(0,0,0,0.2);
+}
+
+/* Table row hover */
+.dash-table-row {
+  transition: background-color 0.15s ease, padding-left 0.15s ease;
+}
+.dash-table-row:hover {
+  background-color: hsl(var(--muted) / 0.4);
+}
+
+/* Activity row hover */
+.dash-activity-row {
+  transition: background-color 0.18s ease,
+              transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+              padding 0.18s ease;
+  border-radius: 0.5rem;
+}
+.dash-activity-row:hover {
+  background-color: hsl(var(--muted) / 0.45);
+  transform: translateX(4px);
+}
+
+/* Zap icon animation */
+.dash-zap {
+  animation: dash-zap-spin 2.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Shimmer on the big % number */
+.dash-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--foreground)) 0%,
+    rgb(234 179 8) 40%,
+    hsl(var(--foreground)) 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: dash-shimmer 3s linear infinite;
 }

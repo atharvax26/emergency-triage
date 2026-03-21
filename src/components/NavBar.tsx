@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Activity, LogOut } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { ConnectionStatus } from "./ConnectionStatus";
 import { useAuth } from "@/hooks/use-auth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,7 @@ export function NavBar() {
       </a>
       
       <header className="sticky top-0 z-50 border-b bg-card">
-        <nav className="container flex h-16 items-center justify-between gap-4" role="navigation" aria-label="Main navigation">
+        <nav className="container flex h-16 items-center justify-between gap-8" role="navigation" aria-label="Main navigation">
           <div className="flex items-center gap-3">
             <Activity className="h-7 w-7 text-destructive" aria-hidden="true" />
             <span className="text-xl font-bold tracking-tight">Emergency Triage</span>
@@ -50,9 +51,13 @@ export function NavBar() {
                 {l.label}
               </Link>
             ))}
+          </div>
+
+          <div className="flex items-center gap-2">
+            <ConnectionStatus />
             <ThemeToggle />
             {user && (
-              <div className="ml-2 flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <Badge variant="outline" className="text-xs capitalize">
                   {user.role}
                 </Badge>
