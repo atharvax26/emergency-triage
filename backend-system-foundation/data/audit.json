@@ -1,0 +1,178 @@
+[
+  {
+    "id": "67330823-347e-42fc-a4c3-4bb664acd6a9",
+    "timestamp": "2026-03-19T06:45:13.173470Z",
+    "patient_id": "df50a984-6423-4ec7-bbcc-55194c87d212",
+    "patient_name": "atharva",
+    "severity": "critical",
+    "action_taken": "IV access, intubation prep, cardiac team alerted",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "06baeb40-dcde-466e-87f9-1fbefd490685",
+    "timestamp": "2026-03-19T06:51:27.649131Z",
+    "patient_id": "4815ffb6-a224-4544-9a89-b8824b3de8ab",
+    "patient_name": "atharva2",
+    "severity": "low",
+    "action_taken": "Standard intake, scheduled for evaluation",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "b92e0957-45d1-4ce0-87e8-40fecab83260",
+    "timestamp": "2026-03-19T07:27:57.351162Z",
+    "patient_id": "2409f013-8bf6-4bd0-beed-7315b441fdc1",
+    "patient_name": "parthi",
+    "severity": "low",
+    "action_taken": "Standard intake, scheduled for evaluation",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "1098b9a5-cf57-41b5-8c9f-d5df149f5ded",
+    "timestamp": "2026-03-19T07:30:08.206068Z",
+    "patient_id": "08664d66-0e3a-488e-843a-3fceebbb4b42",
+    "patient_name": "atharva",
+    "severity": "medium",
+    "action_taken": "Blood panel ordered, vitals monitoring",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "09a2ebf9-61e3-4c66-aa73-4acb917906ed",
+    "timestamp": "2026-03-19T12:47:36.861696Z",
+    "patient_id": "12fe4ff5-b121-4482-9619-5db9f6baf660",
+    "patient_name": "rayo",
+    "severity": "critical",
+    "action_taken": "IV access, intubation prep, cardiac team alerted",
+    "overridden": true,
+    "override_reason": "Immediately life-threatening vital signs",
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "3f708493-831e-4ddc-b008-734f1e24df59",
+    "timestamp": "2026-03-19T14:42:31.098713Z",
+    "patient_id": "f6a00d69-2c4c-4418-a3e3-275977bb41c9",
+    "patient_name": "jammy",
+    "severity": "medium",
+    "action_taken": "Blood panel ordered, vitals monitoring",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "107ccaac-f4b1-492c-8310-cde60e0ee67a",
+    "timestamp": "2026-03-19T14:54:26.431805Z",
+    "patient_id": "8d6f75df-62ba-4748-8197-bffc66b34a8a",
+    "patient_name": "nomen",
+    "severity": "medium",
+    "action_taken": "Blood panel ordered, vitals monitoring",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "68b096d9-d406-47f4-85fe-1749e4a0f21d",
+    "timestamp": "2026-03-21T06:37:43.575098Z",
+    "patient_id": "fc06eda1-4579-4fee-b7ec-dc8730c57f21",
+    "patient_name": "samraj",
+    "severity": "low",
+    "action_taken": "Standard intake, scheduled for evaluation",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "2da5e60c-09ae-4a30-9f9c-c3aeb2a6f54a",
+    "timestamp": "2026-03-21T06:48:09.831828Z",
+    "patient_id": "855275c7-f725-4703-bb28-0c24f07483c7",
+    "patient_name": "ritesh",
+    "severity": "low",
+    "action_taken": "Standard intake, scheduled for evaluation",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "0c388a6a-aa63-46ee-8a93-ab7d3e951280",
+    "timestamp": "2026-03-21T07:05:18.033233Z",
+    "patient_id": "48a65106-29f3-4bc9-98f8-0e57e96662d2",
+    "patient_name": "Meera Subramaniam",
+    "severity": "medium",
+    "action_taken": "Blood panel ordered, vitals monitoring",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "326215ac-26b4-4ad3-9b97-2263bb8eb5da",
+    "timestamp": "2026-03-21T07:28:34.367721Z",
+    "patient_id": "fc06eda1-4579-4fee-b7ec-dc8730c57f21",
+    "patient_name": "samraj",
+    "severity": "high",
+    "action_taken": "AI triage override: LOW → HIGH. Reason: Patient history indicates higher risk",
+    "overridden": true,
+    "override_reason": "kkkkkklkjnbbouhhhbhuu",
+    "performed_by": "Atharva (DC-445589)"
+  },
+  {
+    "id": "64515784-2a59-44e7-aaa2-047fc92d5f61",
+    "timestamp": "2026-03-21T07:34:06.533125Z",
+    "patient_id": "fc06eda1-4579-4fee-b7ec-dc8730c57f21",
+    "patient_name": "samraj",
+    "severity": "high",
+    "action_taken": "AI triage override: LOW → HIGH. Reason: Patient deterioration observed",
+    "overridden": true,
+    "override_reason": "jkjbkbkkkb;kbbbljkbhh",
+    "performed_by": "Atharva (DC-445589)"
+  },
+  {
+    "id": "81366f87-89de-4104-8389-a1cfce44dfea",
+    "timestamp": "2026-03-21T10:36:38.641645Z",
+    "patient_id": "e202ad48-84d2-4646-af93-710b0e42de1f",
+    "patient_name": "daisy",
+    "severity": "low",
+    "action_taken": "Standard intake, scheduled for evaluation",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "3b28e9ce-0ba4-4712-81a8-d9cf2a70096f",
+    "timestamp": "2026-03-21T10:41:24.500081Z",
+    "patient_id": "e202ad48-84d2-4646-af93-710b0e42de1f",
+    "patient_name": "daisy",
+    "severity": "high",
+    "action_taken": "AI triage override: LOW → HIGH. Reason: Patient history indicates higher risk",
+    "overridden": true,
+    "override_reason": "bjhviyktdsiytdiiiiyid",
+    "performed_by": "Jeeval (DC-445589)"
+  },
+  {
+    "id": "cd1f9819-e5dc-41a4-b8bb-fbe8b8c64992",
+    "timestamp": "2026-03-21T10:42:56.956494Z",
+    "patient_id": "aa87049e-5b3f-4b6b-8d49-c0b10d6a34e2",
+    "patient_name": "mk",
+    "severity": "low",
+    "action_taken": "Standard intake, scheduled for evaluation",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  },
+  {
+    "id": "6dc492ab-85ca-4683-a20f-c06504158aaf",
+    "timestamp": "2026-03-21T10:45:40.310965Z",
+    "patient_id": "f7e6a2e7-c06d-44ed-875f-fe4ddbc2b964",
+    "patient_name": "mmm",
+    "severity": "medium",
+    "action_taken": "Blood panel ordered, vitals monitoring",
+    "overridden": false,
+    "override_reason": null,
+    "performed_by": "Atharva"
+  }
+]

@@ -1,0 +1,3334 @@
+{
+  "validated_at": "2026-03-20T10:39:41.547114Z",
+  "total_cases": 150,
+  "passed": 150,
+  "failed": 0,
+  "success_rate_pct": 100.0,
+  "failure_rate_pct": 0.0,
+  "avg_compression_pct": 68.73,
+  "per_severity": {
+    "CRITICAL": {
+      "pass": 30,
+      "fail": 0,
+      "pass_rate_pct": 100.0
+    },
+    "HIGH": {
+      "pass": 38,
+      "fail": 0,
+      "pass_rate_pct": 100.0
+    },
+    "MEDIUM": {
+      "pass": 38,
+      "fail": 0,
+      "pass_rate_pct": 100.0
+    },
+    "LOW": {
+      "pass": 44,
+      "fail": 0,
+      "pass_rate_pct": 100.0
+    }
+  },
+  "failures": [],
+  "results": [
+    {
+      "case_id": "critical-019",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1263,
+        "compressed_tokens": 388,
+        "reduction_percent": 69.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.3,
+        "scaledown_ms": 1747.16,
+        "llm_ms": 5293.37,
+        "total_ms": 7040.83,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-034",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1062,
+        "compressed_tokens": 364,
+        "reduction_percent": 65.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1897.53,
+        "llm_ms": 208.38,
+        "total_ms": 2106.07,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-024",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1259,
+        "compressed_tokens": 373,
+        "reduction_percent": 70.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.45,
+        "scaledown_ms": 2024.58,
+        "llm_ms": 118.13,
+        "total_ms": 2143.16,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-026",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1245,
+        "compressed_tokens": 385,
+        "reduction_percent": 69.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.18,
+        "scaledown_ms": 1907.13,
+        "llm_ms": 183.8,
+        "total_ms": 2091.11,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-002",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1037,
+        "compressed_tokens": 369,
+        "reduction_percent": 64.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.39,
+        "scaledown_ms": 1565.24,
+        "llm_ms": 123.74,
+        "total_ms": 1689.37,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-033",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1018,
+        "compressed_tokens": 367,
+        "reduction_percent": 63.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.41,
+        "scaledown_ms": 1706.6,
+        "llm_ms": 159.99,
+        "total_ms": 1867.0,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-038",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1065,
+        "compressed_tokens": 391,
+        "reduction_percent": 63.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.14,
+        "scaledown_ms": 2135.11,
+        "llm_ms": 308.5,
+        "total_ms": 2443.75,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-011",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1177,
+        "compressed_tokens": 345,
+        "reduction_percent": 70.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.15,
+        "scaledown_ms": 2237.24,
+        "llm_ms": 166.79,
+        "total_ms": 2404.18,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-005",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1148,
+        "compressed_tokens": 326,
+        "reduction_percent": 71.6
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1959.89,
+        "llm_ms": 305.39,
+        "total_ms": 2265.44,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-004",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1067,
+        "compressed_tokens": 375,
+        "reduction_percent": 64.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.23,
+        "scaledown_ms": 1915.94,
+        "llm_ms": 206.98,
+        "total_ms": 2123.15,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-019",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1181,
+        "compressed_tokens": 328,
+        "reduction_percent": 72.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 1931.5,
+        "llm_ms": 109.35,
+        "total_ms": 2041.02,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-013",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1039,
+        "compressed_tokens": 392,
+        "reduction_percent": 62.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1825.51,
+        "llm_ms": 303.09,
+        "total_ms": 2128.76,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-036",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1056,
+        "compressed_tokens": 373,
+        "reduction_percent": 64.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.4,
+        "scaledown_ms": 2027.1,
+        "llm_ms": 309.43,
+        "total_ms": 2336.93,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-027",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1014,
+        "compressed_tokens": 369,
+        "reduction_percent": 63.6
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.25,
+        "scaledown_ms": 1819.89,
+        "llm_ms": 118.46,
+        "total_ms": 1938.6,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-007",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1242,
+        "compressed_tokens": 374,
+        "reduction_percent": 69.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.27,
+        "scaledown_ms": 2000.51,
+        "llm_ms": 212.31,
+        "total_ms": 2213.09,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-028",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1049,
+        "compressed_tokens": 366,
+        "reduction_percent": 65.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.26,
+        "scaledown_ms": 1632.87,
+        "llm_ms": 112.5,
+        "total_ms": 1745.63,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-002",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1147,
+        "compressed_tokens": 283,
+        "reduction_percent": 75.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.22,
+        "scaledown_ms": 1889.35,
+        "llm_ms": 111.39,
+        "total_ms": 2000.96,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-013",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1270,
+        "compressed_tokens": 397,
+        "reduction_percent": 68.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.37,
+        "scaledown_ms": 1789.2,
+        "llm_ms": 142.93,
+        "total_ms": 1932.5,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-012",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1253,
+        "compressed_tokens": 383,
+        "reduction_percent": 69.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.23,
+        "scaledown_ms": 2134.6,
+        "llm_ms": 105.26,
+        "total_ms": 2240.09,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-032",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1044,
+        "compressed_tokens": 374,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1512.75,
+        "llm_ms": 173.4,
+        "total_ms": 1686.34,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-015",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1037,
+        "compressed_tokens": 371,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1569.58,
+        "llm_ms": 111.38,
+        "total_ms": 1681.12,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-023",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1037,
+        "compressed_tokens": 371,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1812.08,
+        "llm_ms": 202.88,
+        "total_ms": 2015.15,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-014",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1085,
+        "compressed_tokens": 329,
+        "reduction_percent": 69.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.28,
+        "scaledown_ms": 1824.86,
+        "llm_ms": 132.15,
+        "total_ms": 1957.29,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-027",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1046,
+        "compressed_tokens": 405,
+        "reduction_percent": 61.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.13,
+        "scaledown_ms": 1728.19,
+        "llm_ms": 261.95,
+        "total_ms": 1990.27,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-007",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1095,
+        "compressed_tokens": 239,
+        "reduction_percent": 78.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 1880.01,
+        "llm_ms": 148.12,
+        "total_ms": 2028.3,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-028",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1064,
+        "compressed_tokens": 369,
+        "reduction_percent": 65.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.67,
+        "scaledown_ms": 1917.68,
+        "llm_ms": 206.34,
+        "total_ms": 2124.69,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-022",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1030,
+        "compressed_tokens": 364,
+        "reduction_percent": 64.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.27,
+        "scaledown_ms": 2223.15,
+        "llm_ms": 124.58,
+        "total_ms": 2348.0,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-030",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1068,
+        "compressed_tokens": 377,
+        "reduction_percent": 64.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.32,
+        "scaledown_ms": 1790.2,
+        "llm_ms": 205.55,
+        "total_ms": 1996.07,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-016",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1049,
+        "compressed_tokens": 366,
+        "reduction_percent": 65.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.29,
+        "scaledown_ms": 2020.23,
+        "llm_ms": 205.85,
+        "total_ms": 2226.37,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-034",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1162,
+        "compressed_tokens": 336,
+        "reduction_percent": 71.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.26,
+        "scaledown_ms": 2132.4,
+        "llm_ms": 110.55,
+        "total_ms": 2243.21,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-033",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1298,
+        "compressed_tokens": 348,
+        "reduction_percent": 73.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 2059.67,
+        "llm_ms": 166.64,
+        "total_ms": 2226.47,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-029",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1093,
+        "compressed_tokens": 297,
+        "reduction_percent": 72.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.13,
+        "scaledown_ms": 1926.04,
+        "llm_ms": 207.27,
+        "total_ms": 2133.44,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-024",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1192,
+        "compressed_tokens": 359,
+        "reduction_percent": 69.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.27,
+        "scaledown_ms": 2210.04,
+        "llm_ms": 220.48,
+        "total_ms": 2430.79,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-003",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1221,
+        "compressed_tokens": 385,
+        "reduction_percent": 68.5
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.14,
+        "scaledown_ms": 2040.21,
+        "llm_ms": 398.74,
+        "total_ms": 2439.09,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-005",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1274,
+        "compressed_tokens": 397,
+        "reduction_percent": 68.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.18,
+        "scaledown_ms": 2442.67,
+        "llm_ms": 198.92,
+        "total_ms": 2641.77,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-010",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1110,
+        "compressed_tokens": 347,
+        "reduction_percent": 68.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.46,
+        "scaledown_ms": 2081.83,
+        "llm_ms": 136.54,
+        "total_ms": 2218.83,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-021",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1020,
+        "compressed_tokens": 369,
+        "reduction_percent": 63.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.15,
+        "scaledown_ms": 1941.23,
+        "llm_ms": 113.97,
+        "total_ms": 2055.35,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-017",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1272,
+        "compressed_tokens": 431,
+        "reduction_percent": 66.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.18,
+        "scaledown_ms": 2123.66,
+        "llm_ms": 118.59,
+        "total_ms": 2242.43,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-037",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1244,
+        "compressed_tokens": 384,
+        "reduction_percent": 69.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 2017.3,
+        "llm_ms": 115.8,
+        "total_ms": 2133.26,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-009",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1102,
+        "compressed_tokens": 324,
+        "reduction_percent": 70.6
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.27,
+        "scaledown_ms": 2026.17,
+        "llm_ms": 189.85,
+        "total_ms": 2216.29,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-040",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1044,
+        "compressed_tokens": 374,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.13,
+        "scaledown_ms": 1827.59,
+        "llm_ms": 202.98,
+        "total_ms": 2030.7,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-027",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1247,
+        "compressed_tokens": 382,
+        "reduction_percent": 69.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 1887.88,
+        "llm_ms": 111.87,
+        "total_ms": 1999.92,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-025",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1030,
+        "compressed_tokens": 364,
+        "reduction_percent": 64.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.11,
+        "scaledown_ms": 1767.28,
+        "llm_ms": 204.62,
+        "total_ms": 1972.01,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-021",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1299,
+        "compressed_tokens": 325,
+        "reduction_percent": 75.0
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.47,
+        "scaledown_ms": 2014.0,
+        "llm_ms": 113.47,
+        "total_ms": 2127.94,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-007",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1287,
+        "compressed_tokens": 347,
+        "reduction_percent": 73.0
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1916.58,
+        "llm_ms": 114.04,
+        "total_ms": 2030.81,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-019",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1045,
+        "compressed_tokens": 374,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.11,
+        "scaledown_ms": 1711.81,
+        "llm_ms": 109.51,
+        "total_ms": 1821.43,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-027",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1242,
+        "compressed_tokens": 374,
+        "reduction_percent": 69.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.36,
+        "scaledown_ms": 2322.77,
+        "llm_ms": 119.85,
+        "total_ms": 2442.98,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-023",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1251,
+        "compressed_tokens": 375,
+        "reduction_percent": 70.0
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.12,
+        "scaledown_ms": 2115.13,
+        "llm_ms": 227.36,
+        "total_ms": 2342.61,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-009",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1270,
+        "compressed_tokens": 397,
+        "reduction_percent": 68.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 2216.85,
+        "llm_ms": 115.22,
+        "total_ms": 2332.26,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-030",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1219,
+        "compressed_tokens": 388,
+        "reduction_percent": 68.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 2005.29,
+        "llm_ms": 103.2,
+        "total_ms": 2108.66,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-038",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1037,
+        "compressed_tokens": 371,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.15,
+        "scaledown_ms": 1938.93,
+        "llm_ms": 115.78,
+        "total_ms": 2054.86,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-013",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1158,
+        "compressed_tokens": 330,
+        "reduction_percent": 71.5
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.24,
+        "scaledown_ms": 2200.82,
+        "llm_ms": 121.16,
+        "total_ms": 2322.22,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-003",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1231,
+        "compressed_tokens": 334,
+        "reduction_percent": 72.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.22,
+        "scaledown_ms": 1929.86,
+        "llm_ms": 107.55,
+        "total_ms": 2037.63,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-006",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1259,
+        "compressed_tokens": 374,
+        "reduction_percent": 70.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 1924.68,
+        "llm_ms": 101.58,
+        "total_ms": 2026.43,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-043",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1108,
+        "compressed_tokens": 347,
+        "reduction_percent": 68.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.39,
+        "scaledown_ms": 1914.36,
+        "llm_ms": 99.67,
+        "total_ms": 2014.42,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-026",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1150,
+        "compressed_tokens": 332,
+        "reduction_percent": 71.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.2,
+        "scaledown_ms": 1821.32,
+        "llm_ms": 341.0,
+        "total_ms": 2162.52,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-016",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1298,
+        "compressed_tokens": 392,
+        "reduction_percent": 69.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 2000.85,
+        "llm_ms": 105.85,
+        "total_ms": 2106.87,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-014",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1217,
+        "compressed_tokens": 383,
+        "reduction_percent": 68.5
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1920.74,
+        "llm_ms": 207.26,
+        "total_ms": 2128.19,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-014",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1186,
+        "compressed_tokens": 298,
+        "reduction_percent": 74.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1898.54,
+        "llm_ms": 111.02,
+        "total_ms": 2009.75,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-012",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1071,
+        "compressed_tokens": 377,
+        "reduction_percent": 64.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.26,
+        "scaledown_ms": 1740.03,
+        "llm_ms": 110.27,
+        "total_ms": 1850.56,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-022",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1137,
+        "compressed_tokens": 329,
+        "reduction_percent": 71.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.24,
+        "scaledown_ms": 2020.3,
+        "llm_ms": 123.85,
+        "total_ms": 2144.39,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-008",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1037,
+        "compressed_tokens": 371,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.3,
+        "scaledown_ms": 1800.0,
+        "llm_ms": 206.04,
+        "total_ms": 2006.34,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-025",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1121,
+        "compressed_tokens": 288,
+        "reduction_percent": 74.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.14,
+        "scaledown_ms": 1926.67,
+        "llm_ms": 125.15,
+        "total_ms": 2051.96,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-042",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1039,
+        "compressed_tokens": 392,
+        "reduction_percent": 62.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.14,
+        "scaledown_ms": 1705.67,
+        "llm_ms": 108.98,
+        "total_ms": 1814.79,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-022",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1272,
+        "compressed_tokens": 431,
+        "reduction_percent": 66.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.22,
+        "scaledown_ms": 1823.1,
+        "llm_ms": 107.21,
+        "total_ms": 1930.53,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-037",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1045,
+        "compressed_tokens": 374,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.2,
+        "scaledown_ms": 1721.86,
+        "llm_ms": 114.75,
+        "total_ms": 1836.81,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-026",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1221,
+        "compressed_tokens": 386,
+        "reduction_percent": 68.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.24,
+        "scaledown_ms": 1804.12,
+        "llm_ms": 118.01,
+        "total_ms": 1922.37,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-033",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1145,
+        "compressed_tokens": 323,
+        "reduction_percent": 71.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.27,
+        "scaledown_ms": 1812.75,
+        "llm_ms": 113.64,
+        "total_ms": 1926.66,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-003",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1020,
+        "compressed_tokens": 369,
+        "reduction_percent": 63.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.38,
+        "scaledown_ms": 1493.97,
+        "llm_ms": 203.9,
+        "total_ms": 1698.25,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-015",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1248,
+        "compressed_tokens": 384,
+        "reduction_percent": 69.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.24,
+        "scaledown_ms": 1813.39,
+        "llm_ms": 114.24,
+        "total_ms": 1927.87,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-010",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1274,
+        "compressed_tokens": 385,
+        "reduction_percent": 69.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.48,
+        "scaledown_ms": 1791.3,
+        "llm_ms": 112.92,
+        "total_ms": 1904.7,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-006",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1039,
+        "compressed_tokens": 373,
+        "reduction_percent": 64.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.24,
+        "scaledown_ms": 1605.46,
+        "llm_ms": 105.31,
+        "total_ms": 1711.01,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-041",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1028,
+        "compressed_tokens": 362,
+        "reduction_percent": 64.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.36,
+        "scaledown_ms": 1621.75,
+        "llm_ms": 202.67,
+        "total_ms": 1824.78,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-024",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1109,
+        "compressed_tokens": 334,
+        "reduction_percent": 69.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.31,
+        "scaledown_ms": 1812.93,
+        "llm_ms": 203.52,
+        "total_ms": 2016.76,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-038",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1234,
+        "compressed_tokens": 406,
+        "reduction_percent": 67.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1812.52,
+        "llm_ms": 204.62,
+        "total_ms": 2017.3,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-011",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1217,
+        "compressed_tokens": 383,
+        "reduction_percent": 68.5
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1807.82,
+        "llm_ms": 109.66,
+        "total_ms": 1917.67,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-009",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1061,
+        "compressed_tokens": 373,
+        "reduction_percent": 64.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.42,
+        "scaledown_ms": 1708.01,
+        "llm_ms": 130.6,
+        "total_ms": 1839.03,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-002",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1291,
+        "compressed_tokens": 347,
+        "reduction_percent": 73.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.28,
+        "scaledown_ms": 1783.9,
+        "llm_ms": 207.81,
+        "total_ms": 1991.99,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-028",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1252,
+        "compressed_tokens": 396,
+        "reduction_percent": 68.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.42,
+        "scaledown_ms": 1913.29,
+        "llm_ms": 102.75,
+        "total_ms": 2016.46,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-001",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1147,
+        "compressed_tokens": 351,
+        "reduction_percent": 69.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.14,
+        "scaledown_ms": 1914.55,
+        "llm_ms": 144.38,
+        "total_ms": 2059.07,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-031",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1161,
+        "compressed_tokens": 280,
+        "reduction_percent": 75.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.25,
+        "scaledown_ms": 1781.58,
+        "llm_ms": 107.1,
+        "total_ms": 1888.93,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-003",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1070,
+        "compressed_tokens": 320,
+        "reduction_percent": 70.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.2,
+        "scaledown_ms": 1925.04,
+        "llm_ms": 123.66,
+        "total_ms": 2048.9,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-024",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1220,
+        "compressed_tokens": 314,
+        "reduction_percent": 74.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.18,
+        "scaledown_ms": 1732.63,
+        "llm_ms": 115.5,
+        "total_ms": 1848.31,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-011",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1063,
+        "compressed_tokens": 347,
+        "reduction_percent": 67.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.12,
+        "scaledown_ms": 1714.08,
+        "llm_ms": 207.25,
+        "total_ms": 1921.45,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-010",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1082,
+        "compressed_tokens": 366,
+        "reduction_percent": 66.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.22,
+        "scaledown_ms": 1714.26,
+        "llm_ms": 97.9,
+        "total_ms": 1812.38,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-029",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1238,
+        "compressed_tokens": 377,
+        "reduction_percent": 69.5
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.24,
+        "scaledown_ms": 1711.83,
+        "llm_ms": 101.28,
+        "total_ms": 1813.35,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-020",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1249,
+        "compressed_tokens": 380,
+        "reduction_percent": 69.6
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1914.98,
+        "llm_ms": 206.21,
+        "total_ms": 2121.38,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-032",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1189,
+        "compressed_tokens": 344,
+        "reduction_percent": 71.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.3,
+        "scaledown_ms": 1916.94,
+        "llm_ms": 105.92,
+        "total_ms": 2023.16,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-018",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1195,
+        "compressed_tokens": 359,
+        "reduction_percent": 70.0
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.41,
+        "scaledown_ms": 1905.8,
+        "llm_ms": 103.94,
+        "total_ms": 2010.15,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-032",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1070,
+        "compressed_tokens": 378,
+        "reduction_percent": 64.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.31,
+        "scaledown_ms": 1712.06,
+        "llm_ms": 202.57,
+        "total_ms": 1914.94,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-044",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1108,
+        "compressed_tokens": 347,
+        "reduction_percent": 68.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.27,
+        "scaledown_ms": 2024.8,
+        "llm_ms": 110.1,
+        "total_ms": 2135.17,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-011",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1126,
+        "compressed_tokens": 329,
+        "reduction_percent": 70.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1801.16,
+        "llm_ms": 95.35,
+        "total_ms": 1896.7,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-031",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1108,
+        "compressed_tokens": 347,
+        "reduction_percent": 68.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1820.14,
+        "llm_ms": 127.81,
+        "total_ms": 1948.14,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-008",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1176,
+        "compressed_tokens": 358,
+        "reduction_percent": 69.6
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.31,
+        "scaledown_ms": 2001.58,
+        "llm_ms": 112.69,
+        "total_ms": 2114.58,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-014",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1177,
+        "compressed_tokens": 343,
+        "reduction_percent": 70.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.12,
+        "scaledown_ms": 1707.66,
+        "llm_ms": 117.43,
+        "total_ms": 1825.21,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-001",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1043,
+        "compressed_tokens": 372,
+        "reduction_percent": 64.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.38,
+        "scaledown_ms": 1641.8,
+        "llm_ms": 109.04,
+        "total_ms": 1751.22,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-005",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1033,
+        "compressed_tokens": 392,
+        "reduction_percent": 62.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.25,
+        "scaledown_ms": 1652.79,
+        "llm_ms": 99.09,
+        "total_ms": 1752.13,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-037",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1195,
+        "compressed_tokens": 317,
+        "reduction_percent": 73.5
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1815.37,
+        "llm_ms": 210.78,
+        "total_ms": 2026.34,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-031",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1132,
+        "compressed_tokens": 319,
+        "reduction_percent": 71.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.25,
+        "scaledown_ms": 1913.72,
+        "llm_ms": 109.89,
+        "total_ms": 2023.86,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-023",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1158,
+        "compressed_tokens": 338,
+        "reduction_percent": 70.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.39,
+        "scaledown_ms": 1912.6,
+        "llm_ms": 104.36,
+        "total_ms": 2017.35,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-035",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1234,
+        "compressed_tokens": 392,
+        "reduction_percent": 68.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.5,
+        "scaledown_ms": 1716.48,
+        "llm_ms": 111.47,
+        "total_ms": 1828.45,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-020",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1145,
+        "compressed_tokens": 334,
+        "reduction_percent": 70.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.22,
+        "scaledown_ms": 1901.63,
+        "llm_ms": 108.88,
+        "total_ms": 2010.73,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-022",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1191,
+        "compressed_tokens": 299,
+        "reduction_percent": 74.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1709.53,
+        "llm_ms": 98.64,
+        "total_ms": 1808.36,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-021",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1270,
+        "compressed_tokens": 397,
+        "reduction_percent": 68.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.27,
+        "scaledown_ms": 1821.15,
+        "llm_ms": 107.0,
+        "total_ms": 1928.42,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-010",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1229,
+        "compressed_tokens": 329,
+        "reduction_percent": 73.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.13,
+        "scaledown_ms": 1810.5,
+        "llm_ms": 104.46,
+        "total_ms": 1915.09,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-030",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1179,
+        "compressed_tokens": 341,
+        "reduction_percent": 71.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.2,
+        "scaledown_ms": 1921.53,
+        "llm_ms": 106.87,
+        "total_ms": 2028.6,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-016",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1199,
+        "compressed_tokens": 362,
+        "reduction_percent": 69.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.21,
+        "scaledown_ms": 1813.24,
+        "llm_ms": 126.44,
+        "total_ms": 1939.89,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-018",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1136,
+        "compressed_tokens": 347,
+        "reduction_percent": 69.5
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 1678.85,
+        "llm_ms": 102.44,
+        "total_ms": 1781.46,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-008",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1200,
+        "compressed_tokens": 362,
+        "reduction_percent": 69.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.39,
+        "scaledown_ms": 1813.01,
+        "llm_ms": 107.28,
+        "total_ms": 1920.68,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-018",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1044,
+        "compressed_tokens": 374,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1528.63,
+        "llm_ms": 110.29,
+        "total_ms": 1639.11,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-021",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1135,
+        "compressed_tokens": 296,
+        "reduction_percent": 73.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1786.69,
+        "llm_ms": 112.3,
+        "total_ms": 1899.18,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-017",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1197,
+        "compressed_tokens": 299,
+        "reduction_percent": 75.0
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.13,
+        "scaledown_ms": 1811.72,
+        "llm_ms": 205.47,
+        "total_ms": 2017.32,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-030",
+      "expected_severity": "LOW",
+      "predicted_severity": "LOW",
+      "compression_stats": {
+        "original_tokens": 1045,
+        "compressed_tokens": 374,
+        "reduction_percent": 64.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.2,
+        "scaledown_ms": 1603.54,
+        "llm_ms": 202.97,
+        "total_ms": 1806.71,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-020",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1039,
+        "compressed_tokens": 373,
+        "reduction_percent": 64.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1724.31,
+        "llm_ms": 101.02,
+        "total_ms": 1825.49,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-002",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1237,
+        "compressed_tokens": 384,
+        "reduction_percent": 69.0
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1813.64,
+        "llm_ms": 98.68,
+        "total_ms": 1912.48,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-006",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1056,
+        "compressed_tokens": 409,
+        "reduction_percent": 61.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1824.83,
+        "llm_ms": 112.77,
+        "total_ms": 1937.76,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-025",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1063,
+        "compressed_tokens": 410,
+        "reduction_percent": 61.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.29,
+        "scaledown_ms": 1697.54,
+        "llm_ms": 103.09,
+        "total_ms": 1800.92,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-007",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1183,
+        "compressed_tokens": 312,
+        "reduction_percent": 73.6
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.1,
+        "scaledown_ms": 1721.12,
+        "llm_ms": 103.55,
+        "total_ms": 1824.77,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-009",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1288,
+        "compressed_tokens": 235,
+        "reduction_percent": 81.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.62,
+        "scaledown_ms": 2022.69,
+        "llm_ms": 315.22,
+        "total_ms": 2338.53,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-013",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1249,
+        "compressed_tokens": 384,
+        "reduction_percent": 69.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.3,
+        "scaledown_ms": 1704.42,
+        "llm_ms": 205.83,
+        "total_ms": 1910.55,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-005",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1247,
+        "compressed_tokens": 382,
+        "reduction_percent": 69.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1811.29,
+        "llm_ms": 204.96,
+        "total_ms": 2016.41,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-029",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1236,
+        "compressed_tokens": 317,
+        "reduction_percent": 74.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.32,
+        "scaledown_ms": 1912.33,
+        "llm_ms": 105.09,
+        "total_ms": 2017.74,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-028",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1283,
+        "compressed_tokens": 336,
+        "reduction_percent": 73.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 1709.15,
+        "llm_ms": 113.28,
+        "total_ms": 1822.6,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-001",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1291,
+        "compressed_tokens": 347,
+        "reduction_percent": 73.1
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.21,
+        "scaledown_ms": 1795.06,
+        "llm_ms": 94.86,
+        "total_ms": 1890.13,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-035",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1028,
+        "compressed_tokens": 362,
+        "reduction_percent": 64.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.2,
+        "scaledown_ms": 1517.8,
+        "llm_ms": 105.85,
+        "total_ms": 1623.85,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-004",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1187,
+        "compressed_tokens": 317,
+        "reduction_percent": 73.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.19,
+        "scaledown_ms": 1910.1,
+        "llm_ms": 112.46,
+        "total_ms": 2022.75,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-001",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1215,
+        "compressed_tokens": 385,
+        "reduction_percent": 68.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.7,
+        "scaledown_ms": 1800.41,
+        "llm_ms": 102.49,
+        "total_ms": 1903.6,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-034",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1295,
+        "compressed_tokens": 422,
+        "reduction_percent": 67.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1721.89,
+        "llm_ms": 106.94,
+        "total_ms": 1828.99,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-015",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1051,
+        "compressed_tokens": 402,
+        "reduction_percent": 61.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.11,
+        "scaledown_ms": 1608.03,
+        "llm_ms": 114.44,
+        "total_ms": 1722.58,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-017",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1047,
+        "compressed_tokens": 364,
+        "reduction_percent": 65.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.21,
+        "scaledown_ms": 1692.75,
+        "llm_ms": 108.79,
+        "total_ms": 1801.75,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-006",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1229,
+        "compressed_tokens": 393,
+        "reduction_percent": 68.0
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.29,
+        "scaledown_ms": 1906.41,
+        "llm_ms": 104.28,
+        "total_ms": 2010.98,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-039",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1030,
+        "compressed_tokens": 364,
+        "reduction_percent": 64.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 1928.71,
+        "llm_ms": 160.63,
+        "total_ms": 2089.51,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-025",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1252,
+        "compressed_tokens": 396,
+        "reduction_percent": 68.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.23,
+        "scaledown_ms": 1861.89,
+        "llm_ms": 113.41,
+        "total_ms": 1975.53,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-035",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1146,
+        "compressed_tokens": 313,
+        "reduction_percent": 72.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.2,
+        "scaledown_ms": 2278.15,
+        "llm_ms": 99.53,
+        "total_ms": 2377.88,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-023",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1195,
+        "compressed_tokens": 359,
+        "reduction_percent": 70.0
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.17,
+        "scaledown_ms": 1841.7,
+        "llm_ms": 200.67,
+        "total_ms": 2042.54,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-016",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1059,
+        "compressed_tokens": 411,
+        "reduction_percent": 61.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1725.32,
+        "llm_ms": 206.8,
+        "total_ms": 1932.28,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-026",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1093,
+        "compressed_tokens": 297,
+        "reduction_percent": 72.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.14,
+        "scaledown_ms": 1608.93,
+        "llm_ms": 98.38,
+        "total_ms": 1707.45,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-004",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1028,
+        "compressed_tokens": 362,
+        "reduction_percent": 64.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.25,
+        "scaledown_ms": 2030.26,
+        "llm_ms": 229.58,
+        "total_ms": 2260.09,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-036",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1092,
+        "compressed_tokens": 380,
+        "reduction_percent": 65.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.24,
+        "scaledown_ms": 1785.34,
+        "llm_ms": 101.15,
+        "total_ms": 1886.73,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-015",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1214,
+        "compressed_tokens": 370,
+        "reduction_percent": 69.5
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.23,
+        "scaledown_ms": 1709.5,
+        "llm_ms": 205.84,
+        "total_ms": 1915.57,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-020",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1306,
+        "compressed_tokens": 409,
+        "reduction_percent": 68.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.15,
+        "scaledown_ms": 1926.5,
+        "llm_ms": 100.4,
+        "total_ms": 2027.05,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-008",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1205,
+        "compressed_tokens": 363,
+        "reduction_percent": 69.9
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.2,
+        "scaledown_ms": 2114.11,
+        "llm_ms": 99.4,
+        "total_ms": 2213.71,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-019",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1193,
+        "compressed_tokens": 313,
+        "reduction_percent": 73.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.28,
+        "scaledown_ms": 1815.87,
+        "llm_ms": 103.8,
+        "total_ms": 1919.95,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-004",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1253,
+        "compressed_tokens": 383,
+        "reduction_percent": 69.4
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.16,
+        "scaledown_ms": 1814.54,
+        "llm_ms": 226.42,
+        "total_ms": 2041.12,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-018",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1239,
+        "compressed_tokens": 378,
+        "reduction_percent": 69.5
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.31,
+        "scaledown_ms": 1792.83,
+        "llm_ms": 203.15,
+        "total_ms": 1996.29,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-036",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1182,
+        "compressed_tokens": 275,
+        "reduction_percent": 76.7
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.14,
+        "scaledown_ms": 1745.68,
+        "llm_ms": 134.67,
+        "total_ms": 1880.49,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "low-012",
+      "expected_severity": "LOW",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1047,
+        "compressed_tokens": 364,
+        "reduction_percent": 65.2
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.3,
+        "scaledown_ms": 1680.26,
+        "llm_ms": 103.42,
+        "total_ms": 1783.98,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "high-012",
+      "expected_severity": "HIGH",
+      "predicted_severity": "HIGH",
+      "compression_stats": {
+        "original_tokens": 1299,
+        "compressed_tokens": 330,
+        "reduction_percent": 74.6
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.23,
+        "scaledown_ms": 1915.58,
+        "llm_ms": 113.02,
+        "total_ms": 2028.83,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "medium-017",
+      "expected_severity": "MEDIUM",
+      "predicted_severity": "MEDIUM",
+      "compression_stats": {
+        "original_tokens": 1137,
+        "compressed_tokens": 321,
+        "reduction_percent": 71.8
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.3,
+        "scaledown_ms": 1803.43,
+        "llm_ms": 109.87,
+        "total_ms": 1913.6,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    },
+    {
+      "case_id": "critical-029",
+      "expected_severity": "CRITICAL",
+      "predicted_severity": "CRITICAL",
+      "compression_stats": {
+        "original_tokens": 1263,
+        "compressed_tokens": 388,
+        "reduction_percent": 69.3
+      },
+      "latency_breakdown": {
+        "ml_ms": 0.33,
+        "scaledown_ms": 1806.59,
+        "llm_ms": 112.09,
+        "total_ms": 1919.01,
+        "scaledown_fallback": false,
+        "llm_fallback": true
+      },
+      "gemini_reasoning": false,
+      "http_status": 200,
+      "validation_errors": [],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,3441 @@
+{
+  "generated_at": "2026-03-20T09:32:49.862969Z",
+  "total_cases": 150,
+  "distribution": {
+    "CRITICAL": 30,
+    "HIGH": 38,
+    "MEDIUM": 38,
+    "LOW": 44
+  },
+  "cases": [
+    {
+      "case_id": "critical-019",
+      "patient_id": "aac6211d-3424-4399-baab-3bf71b73207c",
+      "name": "Mary Hernandez",
+      "age": 61,
+      "gender": "male",
+      "chief_complaint": "severe trauma",
+      "symptoms": [
+        "severe chest pain",
+        "shortness of breath",
+        "diaphoresis",
+        "nausea"
+      ],
+      "vitals": {
+        "systolic_bp": 69,
+        "diastolic_bp": 48,
+        "heart_rate": 134,
+        "respiratory_rate": 32,
+        "temperature": 40.6,
+        "spo2": 79
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857836Z"
+    },
+    {
+      "case_id": "low-034",
+      "patient_id": "4daf73cc-e72f-48ea-ba9d-608e6568b0e0",
+      "name": "Mary Brown",
+      "age": 42,
+      "gender": "male",
+      "chief_complaint": "sore throat",
+      "symptoms": [
+        "sore throat",
+        "rhinorrhea",
+        "mild cough"
+      ],
+      "vitals": {
+        "systolic_bp": 133,
+        "diastolic_bp": 71,
+        "heart_rate": 65,
+        "respiratory_rate": 16,
+        "temperature": 37.1,
+        "spo2": 100
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862200Z"
+    },
+    {
+      "case_id": "critical-024",
+      "patient_id": "f2fec4b5-d505-4dd7-a560-17630c32a05f",
+      "name": "Michael Hernandez",
+      "age": 63,
+      "gender": "male",
+      "chief_complaint": "severe trauma",
+      "symptoms": [
+        "respiratory distress",
+        "severe dyspnea",
+        "accessory muscle use",
+        "tripod positioning"
+      ],
+      "vitals": {
+        "systolic_bp": 81,
+        "diastolic_bp": 38,
+        "heart_rate": 131,
+        "respiratory_rate": 43,
+        "temperature": 35.5,
+        "spo2": 74
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857978Z"
+    },
+    {
+      "case_id": "high-026",
+      "patient_id": "9fefc897-736a-4426-b093-01264a5a431e",
+      "name": "Linda Jones",
+      "age": 58,
+      "gender": "female",
+      "chief_complaint": "palpitations",
+      "symptoms": [
+        "chest pain",
+        "dyspnea",
+        "diaphoresis"
+      ],
+      "vitals": {
+        "systolic_bp": 184,
+        "diastolic_bp": 62,
+        "heart_rate": 125,
+        "respiratory_rate": 26,
+        "temperature": 39.4,
+        "spo2": 89
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859036Z"
+    },
+    {
+      "case_id": "low-002",
+      "patient_id": "adae2c71-c1c7-480f-8ebe-a8e604df4b7a",
+      "name": "John Gonzalez",
+      "age": 41,
+      "gender": "female",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "mild headache",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 117,
+        "diastolic_bp": 83,
+        "heart_rate": 81,
+        "respiratory_rate": 12,
+        "temperature": 36.7,
+        "spo2": 99
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861019Z"
+    },
+    {
+      "case_id": "low-033",
+      "patient_id": "564e5b43-22b5-447b-91fd-99844928f12e",
+      "name": "Jessica Rodriguez",
+      "age": 37,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "mild headache",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 110,
+        "diastolic_bp": 81,
+        "heart_rate": 63,
+        "respiratory_rate": 15,
+        "temperature": 36.8,
+        "spo2": 99
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862167Z"
+    },
+    {
+      "case_id": "medium-038",
+      "patient_id": "51a03387-dfa0-45a9-83c9-7c32c9bbb2af",
+      "name": "Susan Anderson",
+      "age": 37,
+      "gender": "male",
+      "chief_complaint": "fever",
+      "symptoms": [
+        "abdominal pain",
+        "nausea",
+        "vomiting"
+      ],
+      "vitals": {
+        "systolic_bp": 103,
+        "diastolic_bp": 104,
+        "heart_rate": 99,
+        "respiratory_rate": 19,
+        "temperature": 37.9,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860951Z"
+    },
+    {
+      "case_id": "high-011",
+      "patient_id": "dd2c532c-4cef-4a07-b1ab-87caf977fbbc",
+      "name": "Richard Hernandez",
+      "age": 50,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "chest pain",
+        "dyspnea",
+        "diaphoresis"
+      ],
+      "vitals": {
+        "systolic_bp": 94,
+        "diastolic_bp": 61,
+        "heart_rate": 109,
+        "respiratory_rate": 28,
+        "temperature": 39.1,
+        "spo2": 91
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858510Z"
+    },
+    {
+      "case_id": "medium-005",
+      "patient_id": "9c6813fc-e8fa-4671-82cc-4c535019250f",
+      "name": "Patricia Anderson",
+      "age": 60,
+      "gender": "male",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 105,
+        "diastolic_bp": 97,
+        "heart_rate": 98,
+        "respiratory_rate": 19,
+        "temperature": 38.2,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859679Z"
+    },
+    {
+      "case_id": "medium-004",
+      "patient_id": "a53e84ba-422b-42c2-b25b-01d69ef7df92",
+      "name": "Robert Williams",
+      "age": 32,
+      "gender": "female",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "joint pain",
+        "swelling",
+        "limited mobility"
+      ],
+      "vitals": {
+        "systolic_bp": 102,
+        "diastolic_bp": 74,
+        "heart_rate": 91,
+        "respiratory_rate": 20,
+        "temperature": 38.2,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859614Z"
+    },
+    {
+      "case_id": "high-019",
+      "patient_id": "d0702e3b-d0b9-42e8-8723-c238ad39a927",
+      "name": "Elizabeth Wilson",
+      "age": 56,
+      "gender": "female",
+      "chief_complaint": "palpitations",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 92,
+        "diastolic_bp": 56,
+        "heart_rate": 112,
+        "respiratory_rate": 24,
+        "temperature": 38.9,
+        "spo2": 92
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858796Z"
+    },
+    {
+      "case_id": "low-013",
+      "patient_id": "0c021fe7-3b97-4f57-af17-ef6ab918d41d",
+      "name": "Michael Martinez",
+      "age": 34,
+      "gender": "female",
+      "chief_complaint": "ankle sprain",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 110,
+        "diastolic_bp": 75,
+        "heart_rate": 72,
+        "respiratory_rate": 16,
+        "temperature": 37.0,
+        "spo2": 95
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861399Z"
+    },
+    {
+      "case_id": "low-036",
+      "patient_id": "50071762-4356-452a-a0e5-a56f29a7efdb",
+      "name": "Joseph Hernandez",
+      "age": 42,
+      "gender": "female",
+      "chief_complaint": "sore throat",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 126,
+        "diastolic_bp": 76,
+        "heart_rate": 81,
+        "respiratory_rate": 15,
+        "temperature": 37.1,
+        "spo2": 99
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862275Z"
+    },
+    {
+      "case_id": "low-027",
+      "patient_id": "74167cb5-a372-4260-9e31-49359513c61a",
+      "name": "Jessica Thomas",
+      "age": 21,
+      "gender": "female",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "mild headache",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 122,
+        "diastolic_bp": 84,
+        "heart_rate": 66,
+        "respiratory_rate": 16,
+        "temperature": 37.5,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861959Z"
+    },
+    {
+      "case_id": "critical-007",
+      "patient_id": "b1eaacd7-d0a8-433d-9503-b1ebe1bdedbb",
+      "name": "William Wilson",
+      "age": 63,
+      "gender": "female",
+      "chief_complaint": "unresponsive",
+      "symptoms": [
+        "altered mental status",
+        "severe hypotension",
+        "cyanosis"
+      ],
+      "vitals": {
+        "systolic_bp": 66,
+        "diastolic_bp": 53,
+        "heart_rate": 150,
+        "respiratory_rate": 40,
+        "temperature": 40.0,
+        "spo2": 74
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857447Z"
+    },
+    {
+      "case_id": "low-028",
+      "patient_id": "eb2e4967-705a-42fd-bc30-833ca5456358",
+      "name": "Mary Gonzalez",
+      "age": 41,
+      "gender": "male",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 127,
+        "diastolic_bp": 70,
+        "heart_rate": 73,
+        "respiratory_rate": 13,
+        "temperature": 37.3,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861997Z"
+    },
+    {
+      "case_id": "medium-002",
+      "patient_id": "4248d4af-fa12-4b97-8ac7-8c4d6dc3e25d",
+      "name": "Jessica Brown",
+      "age": 49,
+      "gender": "male",
+      "chief_complaint": "chest discomfort",
+      "symptoms": [
+        "fever",
+        "cough",
+        "malaise"
+      ],
+      "vitals": {
+        "systolic_bp": 152,
+        "diastolic_bp": 104,
+        "heart_rate": 103,
+        "respiratory_rate": 20,
+        "temperature": 38.2,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859524Z"
+    },
+    {
+      "case_id": "critical-013",
+      "patient_id": "e0e3390d-232d-4644-bf2f-18a1fab97cf1",
+      "name": "Joseph Brown",
+      "age": 76,
+      "gender": "male",
+      "chief_complaint": "cardiac arrest",
+      "symptoms": [
+        "respiratory distress",
+        "severe dyspnea",
+        "accessory muscle use",
+        "tripod positioning"
+      ],
+      "vitals": {
+        "systolic_bp": 76,
+        "diastolic_bp": 54,
+        "heart_rate": 170,
+        "respiratory_rate": 35,
+        "temperature": 35.2,
+        "spo2": 82
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857613Z"
+    },
+    {
+      "case_id": "critical-012",
+      "patient_id": "dc52f93b-315f-4f0d-a139-e60ba88a0694",
+      "name": "Jessica Garcia",
+      "age": 79,
+      "gender": "female",
+      "chief_complaint": "unresponsive",
+      "symptoms": [
+        "altered mental status",
+        "severe hypotension",
+        "cyanosis"
+      ],
+      "vitals": {
+        "systolic_bp": 67,
+        "diastolic_bp": 53,
+        "heart_rate": 177,
+        "respiratory_rate": 28,
+        "temperature": 39.6,
+        "spo2": 87
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857586Z"
+    },
+    {
+      "case_id": "low-032",
+      "patient_id": "5dd2a977-84a5-4299-9677-a2e512cbf61b",
+      "name": "Jessica Martinez",
+      "age": 39,
+      "gender": "female",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "rash",
+        "pruritus",
+        "no respiratory symptoms"
+      ],
+      "vitals": {
+        "systolic_bp": 115,
+        "diastolic_bp": 82,
+        "heart_rate": 83,
+        "respiratory_rate": 18,
+        "temperature": 37.5,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862130Z"
+    },
+    {
+      "case_id": "low-015",
+      "patient_id": "dc15cc18-7e28-4521-9c51-068328a88750",
+      "name": "Linda Brown",
+      "age": 29,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 119,
+        "diastolic_bp": 75,
+        "heart_rate": 89,
+        "respiratory_rate": 17,
+        "temperature": 37.2,
+        "spo2": 100
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861476Z"
+    },
+    {
+      "case_id": "low-023",
+      "patient_id": "f6fe2dd4-9bf3-449e-9fe6-4bdb1f0f5ab1",
+      "name": "Robert Hernandez",
+      "age": 31,
+      "gender": "female",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 112,
+        "diastolic_bp": 71,
+        "heart_rate": 73,
+        "respiratory_rate": 15,
+        "temperature": 36.7,
+        "spo2": 98
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861819Z"
+    },
+    {
+      "case_id": "low-014",
+      "patient_id": "bd44ecf6-2842-42b5-8dc3-156b5552a7d7",
+      "name": "Elizabeth Williams",
+      "age": 46,
+      "gender": "female",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "mild headache",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 116,
+        "diastolic_bp": 73,
+        "heart_rate": 62,
+        "respiratory_rate": 15,
+        "temperature": 36.6,
+        "spo2": 96
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861434Z"
+    },
+    {
+      "case_id": "medium-027",
+      "patient_id": "1b451de2-5d37-4302-b205-1f1b24027c7a",
+      "name": "Joseph Johnson",
+      "age": 34,
+      "gender": "male",
+      "chief_complaint": "chest discomfort",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 152,
+        "diastolic_bp": 105,
+        "heart_rate": 91,
+        "respiratory_rate": 20,
+        "temperature": 38.4,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860533Z"
+    },
+    {
+      "case_id": "low-007",
+      "patient_id": "d2f9fab9-3203-46bb-8ca7-5fc3729773fd",
+      "name": "William Williams",
+      "age": 49,
+      "gender": "female",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 133,
+        "diastolic_bp": 84,
+        "heart_rate": 72,
+        "respiratory_rate": 14,
+        "temperature": 37.4,
+        "spo2": 96
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861186Z"
+    },
+    {
+      "case_id": "medium-028",
+      "patient_id": "0fafb364-ea3d-420e-9031-b6911afd5c92",
+      "name": "Jessica Jones",
+      "age": 42,
+      "gender": "male",
+      "chief_complaint": "joint pain",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 106,
+        "diastolic_bp": 96,
+        "heart_rate": 91,
+        "respiratory_rate": 21,
+        "temperature": 38.1,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860566Z"
+    },
+    {
+      "case_id": "low-022",
+      "patient_id": "c4424716-6908-4f2c-b814-acc1ad86eb78",
+      "name": "Richard Martinez",
+      "age": 37,
+      "gender": "female",
+      "chief_complaint": "sore throat",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 129,
+        "diastolic_bp": 70,
+        "heart_rate": 80,
+        "respiratory_rate": 16,
+        "temperature": 37.0,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861788Z"
+    },
+    {
+      "case_id": "medium-030",
+      "patient_id": "78239cc6-8143-4545-8798-fe66920f6310",
+      "name": "Barbara Rodriguez",
+      "age": 36,
+      "gender": "male",
+      "chief_complaint": "chest discomfort",
+      "symptoms": [
+        "joint pain",
+        "swelling",
+        "limited mobility"
+      ],
+      "vitals": {
+        "systolic_bp": 163,
+        "diastolic_bp": 75,
+        "heart_rate": 100,
+        "respiratory_rate": 18,
+        "temperature": 38.4,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860638Z"
+    },
+    {
+      "case_id": "low-016",
+      "patient_id": "bf14170d-31a2-456c-8b1d-b7f89ee33632",
+      "name": "Robert Williams",
+      "age": 41,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 135,
+        "diastolic_bp": 74,
+        "heart_rate": 75,
+        "respiratory_rate": 12,
+        "temperature": 36.7,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861514Z"
+    },
+    {
+      "case_id": "medium-034",
+      "patient_id": "2720da72-f160-41df-92b8-f0eeb0766e5f",
+      "name": "Susan Garcia",
+      "age": 54,
+      "gender": "male",
+      "chief_complaint": "joint pain",
+      "symptoms": [
+        "joint pain",
+        "swelling",
+        "limited mobility"
+      ],
+      "vitals": {
+        "systolic_bp": 102,
+        "diastolic_bp": 69,
+        "heart_rate": 104,
+        "respiratory_rate": 21,
+        "temperature": 38.1,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860814Z"
+    },
+    {
+      "case_id": "high-033",
+      "patient_id": "2981cb07-bb22-4864-8b09-a8d58979e9ed",
+      "name": "Susan Hernandez",
+      "age": 72,
+      "gender": "female",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "chest pain",
+        "dyspnea",
+        "diaphoresis"
+      ],
+      "vitals": {
+        "systolic_bp": 190,
+        "diastolic_bp": 58,
+        "heart_rate": 124,
+        "respiratory_rate": 26,
+        "temperature": 38.9,
+        "spo2": 89
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859280Z"
+    },
+    {
+      "case_id": "low-029",
+      "patient_id": "7652413f-aa52-47f8-b9e5-5125a8ca47e4",
+      "name": "William Brown",
+      "age": 50,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 128,
+        "diastolic_bp": 76,
+        "heart_rate": 69,
+        "respiratory_rate": 12,
+        "temperature": 36.9,
+        "spo2": 98
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862032Z"
+    },
+    {
+      "case_id": "medium-024",
+      "patient_id": "4933e75c-8665-417c-9873-2788f3d23dde",
+      "name": "Richard Martinez",
+      "age": 55,
+      "gender": "female",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "joint pain",
+        "swelling",
+        "limited mobility"
+      ],
+      "vitals": {
+        "systolic_bp": 155,
+        "diastolic_bp": 96,
+        "heart_rate": 97,
+        "respiratory_rate": 21,
+        "temperature": 38.4,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860439Z"
+    },
+    {
+      "case_id": "critical-003",
+      "patient_id": "8c805c33-ee05-4aa2-b748-c9c8fc1c3ab5",
+      "name": "William Johnson",
+      "age": 58,
+      "gender": "female",
+      "chief_complaint": "respiratory failure",
+      "symptoms": [
+        "respiratory distress",
+        "severe dyspnea",
+        "accessory muscle use",
+        "tripod positioning"
+      ],
+      "vitals": {
+        "systolic_bp": 82,
+        "diastolic_bp": 48,
+        "heart_rate": 131,
+        "respiratory_rate": 28,
+        "temperature": 39.7,
+        "spo2": 82
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857327Z"
+    },
+    {
+      "case_id": "critical-005",
+      "patient_id": "adcea317-c724-4901-b765-525d776277dd",
+      "name": "William Williams",
+      "age": 66,
+      "gender": "male",
+      "chief_complaint": "unresponsive",
+      "symptoms": [
+        "respiratory distress",
+        "severe dyspnea",
+        "accessory muscle use",
+        "tripod positioning"
+      ],
+      "vitals": {
+        "systolic_bp": 62,
+        "diastolic_bp": 42,
+        "heart_rate": 165,
+        "respiratory_rate": 37,
+        "temperature": 40.1,
+        "spo2": 75
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857385Z"
+    },
+    {
+      "case_id": "low-010",
+      "patient_id": "1e49e24e-2774-4875-b8bc-0d06ece735df",
+      "name": "Robert Anderson",
+      "age": 50,
+      "gender": "male",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "sore throat",
+        "rhinorrhea",
+        "mild cough"
+      ],
+      "vitals": {
+        "systolic_bp": 118,
+        "diastolic_bp": 71,
+        "heart_rate": 80,
+        "respiratory_rate": 15,
+        "temperature": 36.6,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861294Z"
+    },
+    {
+      "case_id": "low-021",
+      "patient_id": "48ae8e9b-87e1-4510-81b3-bf7f9c8cb631",
+      "name": "William Miller",
+      "age": 23,
+      "gender": "female",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "mild headache",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 115,
+        "diastolic_bp": 80,
+        "heart_rate": 78,
+        "respiratory_rate": 12,
+        "temperature": 37.3,
+        "spo2": 95
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861746Z"
+    },
+    {
+      "case_id": "critical-017",
+      "patient_id": "441655ac-7391-4ffa-9679-e48168522aaa",
+      "name": "Mary Smith",
+      "age": 69,
+      "gender": "male",
+      "chief_complaint": "severe chest pain",
+      "symptoms": [
+        "severe abdominal pain",
+        "hematemesis",
+        "melena",
+        "syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 66,
+        "diastolic_bp": 52,
+        "heart_rate": 154,
+        "respiratory_rate": 33,
+        "temperature": 40.1,
+        "spo2": 72
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857774Z"
+    },
+    {
+      "case_id": "high-037",
+      "patient_id": "dff7cc08-968a-4ea2-bf06-03b24cd95ba8",
+      "name": "Patricia Brown",
+      "age": 52,
+      "gender": "female",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "chest pain",
+        "dyspnea",
+        "diaphoresis"
+      ],
+      "vitals": {
+        "systolic_bp": 196,
+        "diastolic_bp": 60,
+        "heart_rate": 112,
+        "respiratory_rate": 27,
+        "temperature": 39.1,
+        "spo2": 90
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859422Z"
+    },
+    {
+      "case_id": "low-009",
+      "patient_id": "2ca9458a-cfe5-4199-93da-59d5dd5bc435",
+      "name": "Mary Lopez",
+      "age": 46,
+      "gender": "female",
+      "chief_complaint": "ankle sprain",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 119,
+        "diastolic_bp": 84,
+        "heart_rate": 73,
+        "respiratory_rate": 13,
+        "temperature": 37.1,
+        "spo2": 100
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861258Z"
+    },
+    {
+      "case_id": "low-040",
+      "patient_id": "76ffb420-96d7-4fb0-974a-7e5ed53c68cf",
+      "name": "Linda Davis",
+      "age": 24,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "rash",
+        "pruritus",
+        "no respiratory symptoms"
+      ],
+      "vitals": {
+        "systolic_bp": 127,
+        "diastolic_bp": 78,
+        "heart_rate": 82,
+        "respiratory_rate": 14,
+        "temperature": 37.4,
+        "spo2": 96
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862424Z"
+    },
+    {
+      "case_id": "high-027",
+      "patient_id": "155539f8-bc36-44ae-8697-157dc9a1a050",
+      "name": "Jessica Anderson",
+      "age": 67,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 87,
+        "diastolic_bp": 114,
+        "heart_rate": 119,
+        "respiratory_rate": 27,
+        "temperature": 38.9,
+        "spo2": 90
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859074Z"
+    },
+    {
+      "case_id": "low-025",
+      "patient_id": "ea8cf5db-b24a-4745-b440-cbe4d9a38e1c",
+      "name": "Susan Davis",
+      "age": 36,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 113,
+        "diastolic_bp": 78,
+        "heart_rate": 64,
+        "respiratory_rate": 12,
+        "temperature": 36.9,
+        "spo2": 95
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861888Z"
+    },
+    {
+      "case_id": "high-021",
+      "patient_id": "4bc54875-b204-43bb-80d6-0ebdcfe83ab4",
+      "name": "William Johnson",
+      "age": 67,
+      "gender": "male",
+      "chief_complaint": "severe headache",
+      "symptoms": [
+        "palpitations",
+        "lightheadedness",
+        "near-syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 198,
+        "diastolic_bp": 111,
+        "heart_rate": 110,
+        "respiratory_rate": 24,
+        "temperature": 38.7,
+        "spo2": 88
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858870Z"
+    },
+    {
+      "case_id": "high-007",
+      "patient_id": "707f5eba-52d3-4826-b74f-3e4ac13853fe",
+      "name": "Jessica Davis",
+      "age": 69,
+      "gender": "female",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "severe headache",
+        "photophobia",
+        "neck stiffness"
+      ],
+      "vitals": {
+        "systolic_bp": 191,
+        "diastolic_bp": 118,
+        "heart_rate": 120,
+        "respiratory_rate": 25,
+        "temperature": 39.4,
+        "spo2": 90
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858387Z"
+    },
+    {
+      "case_id": "low-019",
+      "patient_id": "cd5a177b-4e9c-4949-bc62-d5467806f949",
+      "name": "Linda Lopez",
+      "age": 28,
+      "gender": "female",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "sore throat",
+        "rhinorrhea",
+        "mild cough"
+      ],
+      "vitals": {
+        "systolic_bp": 126,
+        "diastolic_bp": 71,
+        "heart_rate": 76,
+        "respiratory_rate": 13,
+        "temperature": 37.3,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861639Z"
+    },
+    {
+      "case_id": "critical-027",
+      "patient_id": "61b6dc8c-2991-4df7-981d-c84461f80deb",
+      "name": "Elizabeth Wilson",
+      "age": 61,
+      "gender": "male",
+      "chief_complaint": "severe chest pain",
+      "symptoms": [
+        "altered mental status",
+        "severe hypotension",
+        "cyanosis"
+      ],
+      "vitals": {
+        "systolic_bp": 78,
+        "diastolic_bp": 52,
+        "heart_rate": 148,
+        "respiratory_rate": 27,
+        "temperature": 39.7,
+        "spo2": 81
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.858067Z"
+    },
+    {
+      "case_id": "high-023",
+      "patient_id": "896330e6-cc90-4e6e-9f6e-0af582aac2ec",
+      "name": "James Davis",
+      "age": 70,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "palpitations",
+        "lightheadedness",
+        "near-syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 92,
+        "diastolic_bp": 61,
+        "heart_rate": 106,
+        "respiratory_rate": 23,
+        "temperature": 39.1,
+        "spo2": 89
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858937Z"
+    },
+    {
+      "case_id": "critical-009",
+      "patient_id": "8efb1ca5-cb4d-49fe-87f3-e01f9761e320",
+      "name": "Patricia Martinez",
+      "age": 79,
+      "gender": "female",
+      "chief_complaint": "respiratory failure",
+      "symptoms": [
+        "respiratory distress",
+        "severe dyspnea",
+        "accessory muscle use",
+        "tripod positioning"
+      ],
+      "vitals": {
+        "systolic_bp": 79,
+        "diastolic_bp": 49,
+        "heart_rate": 168,
+        "respiratory_rate": 29,
+        "temperature": 35.3,
+        "spo2": 87
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857503Z"
+    },
+    {
+      "case_id": "critical-030",
+      "patient_id": "3d5b091c-5c0f-4a40-b621-0390b074a04e",
+      "name": "Mary Brown",
+      "age": 60,
+      "gender": "female",
+      "chief_complaint": "respiratory failure",
+      "symptoms": [
+        "severe abdominal pain",
+        "hematemesis",
+        "melena",
+        "syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 62,
+        "diastolic_bp": 43,
+        "heart_rate": 126,
+        "respiratory_rate": 29,
+        "temperature": 40.3,
+        "spo2": 78
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.858149Z"
+    },
+    {
+      "case_id": "low-038",
+      "patient_id": "c28935fb-9418-4302-abcb-860af2fb6b87",
+      "name": "Richard Gonzalez",
+      "age": 35,
+      "gender": "female",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 120,
+        "diastolic_bp": 85,
+        "heart_rate": 89,
+        "respiratory_rate": 18,
+        "temperature": 36.8,
+        "spo2": 100
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862356Z"
+    },
+    {
+      "case_id": "medium-013",
+      "patient_id": "04235a5a-3790-4450-8d4c-7aa6bb11e9e0",
+      "name": "Jessica Anderson",
+      "age": 55,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "chest discomfort",
+        "mild dyspnea"
+      ],
+      "vitals": {
+        "systolic_bp": 102,
+        "diastolic_bp": 103,
+        "heart_rate": 90,
+        "respiratory_rate": 18,
+        "temperature": 38.1,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859988Z"
+    },
+    {
+      "case_id": "high-003",
+      "patient_id": "a700ba23-fcfc-4bb5-a5ce-d9e1122a3492",
+      "name": "David Anderson",
+      "age": 51,
+      "gender": "female",
+      "chief_complaint": "palpitations",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 188,
+        "diastolic_bp": 110,
+        "heart_rate": 105,
+        "respiratory_rate": 24,
+        "temperature": 38.9,
+        "spo2": 90
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858262Z"
+    },
+    {
+      "case_id": "critical-006",
+      "patient_id": "b57c90d2-ed1b-461e-8612-ae1a691babb0",
+      "name": "Richard Rodriguez",
+      "age": 62,
+      "gender": "male",
+      "chief_complaint": "respiratory failure",
+      "symptoms": [
+        "severe chest pain",
+        "shortness of breath",
+        "diaphoresis",
+        "nausea"
+      ],
+      "vitals": {
+        "systolic_bp": 77,
+        "diastolic_bp": 42,
+        "heart_rate": 168,
+        "respiratory_rate": 36,
+        "temperature": 35.1,
+        "spo2": 71
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857419Z"
+    },
+    {
+      "case_id": "low-043",
+      "patient_id": "cc866248-b517-4983-9dcb-4f4c500ff8bb",
+      "name": "Mary Smith",
+      "age": 49,
+      "gender": "female",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "sore throat",
+        "rhinorrhea",
+        "mild cough"
+      ],
+      "vitals": {
+        "systolic_bp": 115,
+        "diastolic_bp": 83,
+        "heart_rate": 65,
+        "respiratory_rate": 12,
+        "temperature": 37.4,
+        "spo2": 98
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862526Z"
+    },
+    {
+      "case_id": "medium-026",
+      "patient_id": "9dc35124-2f9e-4b74-b286-16e4e21581f0",
+      "name": "David Hernandez",
+      "age": 58,
+      "gender": "male",
+      "chief_complaint": "joint pain",
+      "symptoms": [
+        "joint pain",
+        "swelling",
+        "limited mobility"
+      ],
+      "vitals": {
+        "systolic_bp": 100,
+        "diastolic_bp": 75,
+        "heart_rate": 105,
+        "respiratory_rate": 21,
+        "temperature": 38.5,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860504Z"
+    },
+    {
+      "case_id": "high-016",
+      "patient_id": "0458af3d-4869-4c5f-a4b6-2ee0cc03efe4",
+      "name": "Joseph Wilson",
+      "age": 70,
+      "gender": "female",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "palpitations",
+        "lightheadedness",
+        "near-syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 186,
+        "diastolic_bp": 57,
+        "heart_rate": 125,
+        "respiratory_rate": 24,
+        "temperature": 39.2,
+        "spo2": 92
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858698Z"
+    },
+    {
+      "case_id": "critical-014",
+      "patient_id": "f6374c1a-3e3d-4c2f-8721-8e8c7739477f",
+      "name": "James Johnson",
+      "age": 57,
+      "gender": "female",
+      "chief_complaint": "unresponsive",
+      "symptoms": [
+        "severe chest pain",
+        "shortness of breath",
+        "diaphoresis",
+        "nausea"
+      ],
+      "vitals": {
+        "systolic_bp": 67,
+        "diastolic_bp": 37,
+        "heart_rate": 162,
+        "respiratory_rate": 33,
+        "temperature": 35.2,
+        "spo2": 70
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857640Z"
+    },
+    {
+      "case_id": "high-014",
+      "patient_id": "1fe9a64d-2ef7-462e-8b73-05cdc68ea213",
+      "name": "Linda Brown",
+      "age": 57,
+      "gender": "female",
+      "chief_complaint": "chest pain",
+      "symptoms": [
+        "severe headache",
+        "photophobia",
+        "neck stiffness"
+      ],
+      "vitals": {
+        "systolic_bp": 90,
+        "diastolic_bp": 57,
+        "heart_rate": 114,
+        "respiratory_rate": 26,
+        "temperature": 39.1,
+        "spo2": 91
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858601Z"
+    },
+    {
+      "case_id": "medium-012",
+      "patient_id": "7d28ede9-e6eb-42e4-a758-cc9957f62b24",
+      "name": "Elizabeth Brown",
+      "age": 34,
+      "gender": "female",
+      "chief_complaint": "chest discomfort",
+      "symptoms": [
+        "chest discomfort",
+        "mild dyspnea"
+      ],
+      "vitals": {
+        "systolic_bp": 157,
+        "diastolic_bp": 97,
+        "heart_rate": 103,
+        "respiratory_rate": 22,
+        "temperature": 37.8,
+        "spo2": 92
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859942Z"
+    },
+    {
+      "case_id": "medium-022",
+      "patient_id": "361fa520-ef3c-424a-a8cc-6d0878065fcc",
+      "name": "Richard Davis",
+      "age": 57,
+      "gender": "female",
+      "chief_complaint": "fever",
+      "symptoms": [
+        "fever",
+        "cough",
+        "malaise"
+      ],
+      "vitals": {
+        "systolic_bp": 101,
+        "diastolic_bp": 99,
+        "heart_rate": 90,
+        "respiratory_rate": 21,
+        "temperature": 38.0,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860367Z"
+    },
+    {
+      "case_id": "low-008",
+      "patient_id": "03b96dd6-b79f-4d1f-8134-a0db34ca89d8",
+      "name": "James Hernandez",
+      "age": 36,
+      "gender": "female",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 112,
+        "diastolic_bp": 83,
+        "heart_rate": 86,
+        "respiratory_rate": 13,
+        "temperature": 37.1,
+        "spo2": 99
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861223Z"
+    },
+    {
+      "case_id": "high-025",
+      "patient_id": "1c44e410-37ca-43a6-993b-2283eaa2c16a",
+      "name": "Jessica Martinez",
+      "age": 45,
+      "gender": "male",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 181,
+        "diastolic_bp": 65,
+        "heart_rate": 122,
+        "respiratory_rate": 22,
+        "temperature": 38.7,
+        "spo2": 89
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859005Z"
+    },
+    {
+      "case_id": "low-042",
+      "patient_id": "a70c9995-fa15-4eb0-984e-2932abf17591",
+      "name": "James Davis",
+      "age": 38,
+      "gender": "male",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 123,
+        "diastolic_bp": 85,
+        "heart_rate": 66,
+        "respiratory_rate": 18,
+        "temperature": 37.0,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862495Z"
+    },
+    {
+      "case_id": "critical-022",
+      "patient_id": "3114c16b-ab0e-4a8d-9b48-4df261cb1787",
+      "name": "Patricia Williams",
+      "age": 69,
+      "gender": "male",
+      "chief_complaint": "severe trauma",
+      "symptoms": [
+        "severe abdominal pain",
+        "hematemesis",
+        "melena",
+        "syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 68,
+        "diastolic_bp": 47,
+        "heart_rate": 145,
+        "respiratory_rate": 28,
+        "temperature": 40.5,
+        "spo2": 70
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857923Z"
+    },
+    {
+      "case_id": "low-037",
+      "patient_id": "834c809c-7c46-4a4a-a56b-a08e46e879fb",
+      "name": "Barbara Miller",
+      "age": 37,
+      "gender": "female",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "sore throat",
+        "rhinorrhea",
+        "mild cough"
+      ],
+      "vitals": {
+        "systolic_bp": 131,
+        "diastolic_bp": 78,
+        "heart_rate": 66,
+        "respiratory_rate": 13,
+        "temperature": 37.1,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862315Z"
+    },
+    {
+      "case_id": "critical-026",
+      "patient_id": "b07ca517-5a85-4ee1-a6f6-c5ebd38dbf35",
+      "name": "Robert Johnson",
+      "age": 55,
+      "gender": "female",
+      "chief_complaint": "severe chest pain",
+      "symptoms": [
+        "severe chest pain",
+        "shortness of breath",
+        "diaphoresis",
+        "nausea"
+      ],
+      "vitals": {
+        "systolic_bp": 84,
+        "diastolic_bp": 39,
+        "heart_rate": 160,
+        "respiratory_rate": 39,
+        "temperature": 39.9,
+        "spo2": 87
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.858035Z"
+    },
+    {
+      "case_id": "medium-033",
+      "patient_id": "9168495f-7b1f-481c-b82a-8969f4c81f83",
+      "name": "Joseph Martinez",
+      "age": 56,
+      "gender": "female",
+      "chief_complaint": "fever",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 105,
+        "diastolic_bp": 74,
+        "heart_rate": 95,
+        "respiratory_rate": 21,
+        "temperature": 37.9,
+        "spo2": 92
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860771Z"
+    },
+    {
+      "case_id": "low-003",
+      "patient_id": "6d9decbc-38d5-47d6-bcd8-3ed1404fb332",
+      "name": "Linda Brown",
+      "age": 40,
+      "gender": "female",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "mild headache",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 111,
+        "diastolic_bp": 82,
+        "heart_rate": 68,
+        "respiratory_rate": 17,
+        "temperature": 37.5,
+        "spo2": 95
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861050Z"
+    },
+    {
+      "case_id": "critical-015",
+      "patient_id": "4970e514-85b6-4d76-8c0d-efafba0a992c",
+      "name": "Jessica Wilson",
+      "age": 73,
+      "gender": "male",
+      "chief_complaint": "unresponsive",
+      "symptoms": [
+        "unresponsive",
+        "seizure activity",
+        "postictal state"
+      ],
+      "vitals": {
+        "systolic_bp": 62,
+        "diastolic_bp": 51,
+        "heart_rate": 159,
+        "respiratory_rate": 30,
+        "temperature": 35.1,
+        "spo2": 88
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857706Z"
+    },
+    {
+      "case_id": "critical-010",
+      "patient_id": "4d7e79d1-4a0b-4962-9034-02ae0e0d3714",
+      "name": "Michael Jones",
+      "age": 84,
+      "gender": "female",
+      "chief_complaint": "respiratory failure",
+      "symptoms": [
+        "severe chest pain",
+        "shortness of breath",
+        "diaphoresis",
+        "nausea"
+      ],
+      "vitals": {
+        "systolic_bp": 65,
+        "diastolic_bp": 49,
+        "heart_rate": 157,
+        "respiratory_rate": 31,
+        "temperature": 40.6,
+        "spo2": 86
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857531Z"
+    },
+    {
+      "case_id": "low-006",
+      "patient_id": "f2ea6433-2006-4c9d-a049-dc9da1fad7f4",
+      "name": "Elizabeth Wilson",
+      "age": 39,
+      "gender": "female",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 111,
+        "diastolic_bp": 76,
+        "heart_rate": 87,
+        "respiratory_rate": 18,
+        "temperature": 36.8,
+        "spo2": 95
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861146Z"
+    },
+    {
+      "case_id": "low-041",
+      "patient_id": "b3d4f8a9-3eb5-4ace-8cdf-1ff681fb2bb7",
+      "name": "Robert Smith",
+      "age": 39,
+      "gender": "male",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 131,
+        "diastolic_bp": 77,
+        "heart_rate": 61,
+        "respiratory_rate": 12,
+        "temperature": 37.1,
+        "spo2": 98
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862463Z"
+    },
+    {
+      "case_id": "low-024",
+      "patient_id": "28b3056b-cd2d-457a-91fb-bfa77f736329",
+      "name": "David Davis",
+      "age": 50,
+      "gender": "female",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "rash",
+        "pruritus",
+        "no respiratory symptoms"
+      ],
+      "vitals": {
+        "systolic_bp": 133,
+        "diastolic_bp": 81,
+        "heart_rate": 64,
+        "respiratory_rate": 18,
+        "temperature": 37.5,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861855Z"
+    },
+    {
+      "case_id": "high-038",
+      "patient_id": "543897b0-47a9-4180-87d8-d0e7a3e74670",
+      "name": "Susan Garcia",
+      "age": 58,
+      "gender": "male",
+      "chief_complaint": "severe headache",
+      "symptoms": [
+        "severe headache",
+        "photophobia",
+        "neck stiffness"
+      ],
+      "vitals": {
+        "systolic_bp": 197,
+        "diastolic_bp": 106,
+        "heart_rate": 114,
+        "respiratory_rate": 24,
+        "temperature": 39.3,
+        "spo2": 90
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859455Z"
+    },
+    {
+      "case_id": "critical-011",
+      "patient_id": "d333cb53-a1b4-477a-8c55-c578163a54be",
+      "name": "Barbara Davis",
+      "age": 55,
+      "gender": "male",
+      "chief_complaint": "respiratory failure",
+      "symptoms": [
+        "severe chest pain",
+        "shortness of breath",
+        "diaphoresis",
+        "nausea"
+      ],
+      "vitals": {
+        "systolic_bp": 84,
+        "diastolic_bp": 40,
+        "heart_rate": 163,
+        "respiratory_rate": 36,
+        "temperature": 35.3,
+        "spo2": 85
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857557Z"
+    },
+    {
+      "case_id": "medium-009",
+      "patient_id": "ccd0cbc0-097f-4a21-86fd-f87579a3a230",
+      "name": "Elizabeth Johnson",
+      "age": 36,
+      "gender": "female",
+      "chief_complaint": "joint pain",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 169,
+        "diastolic_bp": 95,
+        "heart_rate": 104,
+        "respiratory_rate": 19,
+        "temperature": 38.0,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859826Z"
+    },
+    {
+      "case_id": "high-002",
+      "patient_id": "4586d361-ffd0-43ff-bcea-6a04a64e3b65",
+      "name": "Richard Martinez",
+      "age": 66,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 196,
+        "diastolic_bp": 64,
+        "heart_rate": 114,
+        "respiratory_rate": 26,
+        "temperature": 39.2,
+        "spo2": 90
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858229Z"
+    },
+    {
+      "case_id": "critical-028",
+      "patient_id": "9b9603cc-be85-49b3-98cd-1e92be3341cb",
+      "name": "William Garcia",
+      "age": 80,
+      "gender": "male",
+      "chief_complaint": "unresponsive",
+      "symptoms": [
+        "unresponsive",
+        "seizure activity",
+        "postictal state"
+      ],
+      "vitals": {
+        "systolic_bp": 67,
+        "diastolic_bp": 40,
+        "heart_rate": 126,
+        "respiratory_rate": 31,
+        "temperature": 40.7,
+        "spo2": 80
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.858096Z"
+    },
+    {
+      "case_id": "medium-001",
+      "patient_id": "96c54a1d-5e67-4cc5-b57d-0dfe275381d9",
+      "name": "John Anderson",
+      "age": 46,
+      "gender": "female",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "chest discomfort",
+        "mild dyspnea"
+      ],
+      "vitals": {
+        "systolic_bp": 152,
+        "diastolic_bp": 74,
+        "heart_rate": 94,
+        "respiratory_rate": 19,
+        "temperature": 38.1,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859492Z"
+    },
+    {
+      "case_id": "high-031",
+      "patient_id": "8be9cd95-d242-4b51-88f1-5419174d8226",
+      "name": "Jessica Brown",
+      "age": 49,
+      "gender": "male",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "abdominal pain",
+        "vomiting",
+        "fever"
+      ],
+      "vitals": {
+        "systolic_bp": 181,
+        "diastolic_bp": 120,
+        "heart_rate": 111,
+        "respiratory_rate": 24,
+        "temperature": 39.3,
+        "spo2": 92
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859214Z"
+    },
+    {
+      "case_id": "medium-003",
+      "patient_id": "5ba05901-54ba-42b9-b2f6-40dfed8562d9",
+      "name": "Barbara Davis",
+      "age": 33,
+      "gender": "female",
+      "chief_complaint": "chest discomfort",
+      "symptoms": [
+        "joint pain",
+        "swelling",
+        "limited mobility"
+      ],
+      "vitals": {
+        "systolic_bp": 168,
+        "diastolic_bp": 99,
+        "heart_rate": 102,
+        "respiratory_rate": 20,
+        "temperature": 37.8,
+        "spo2": 92
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859563Z"
+    },
+    {
+      "case_id": "high-024",
+      "patient_id": "5b93c601-2a93-4b3d-b12e-6dde6897c843",
+      "name": "Mary Brown",
+      "age": 58,
+      "gender": "male",
+      "chief_complaint": "palpitations",
+      "symptoms": [
+        "abdominal pain",
+        "vomiting",
+        "fever"
+      ],
+      "vitals": {
+        "systolic_bp": 199,
+        "diastolic_bp": 112,
+        "heart_rate": 119,
+        "respiratory_rate": 24,
+        "temperature": 39.0,
+        "spo2": 92
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858972Z"
+    },
+    {
+      "case_id": "low-011",
+      "patient_id": "6a4adb1c-beb7-45f0-a742-4203200b44de",
+      "name": "Robert Anderson",
+      "age": 42,
+      "gender": "female",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "rash",
+        "pruritus",
+        "no respiratory symptoms"
+      ],
+      "vitals": {
+        "systolic_bp": 114,
+        "diastolic_bp": 72,
+        "heart_rate": 80,
+        "respiratory_rate": 14,
+        "temperature": 36.7,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861330Z"
+    },
+    {
+      "case_id": "medium-010",
+      "patient_id": "c25beb9d-1dd6-4cd7-bb43-6fefb29ff920",
+      "name": "Michael Williams",
+      "age": 45,
+      "gender": "male",
+      "chief_complaint": "joint pain",
+      "symptoms": [
+        "fever",
+        "cough",
+        "malaise"
+      ],
+      "vitals": {
+        "systolic_bp": 103,
+        "diastolic_bp": 72,
+        "heart_rate": 90,
+        "respiratory_rate": 18,
+        "temperature": 38.2,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859868Z"
+    },
+    {
+      "case_id": "high-029",
+      "patient_id": "cde01e23-77c5-4eb0-aa4a-e28a92ec18de",
+      "name": "David Brown",
+      "age": 56,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 195,
+        "diastolic_bp": 110,
+        "heart_rate": 120,
+        "respiratory_rate": 22,
+        "temperature": 39.1,
+        "spo2": 91
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859146Z"
+    },
+    {
+      "case_id": "critical-020",
+      "patient_id": "c4bc4841-6fb6-4abf-8dae-99fb57242889",
+      "name": "James Davis",
+      "age": 82,
+      "gender": "female",
+      "chief_complaint": "severe chest pain",
+      "symptoms": [
+        "altered mental status",
+        "severe hypotension",
+        "cyanosis"
+      ],
+      "vitals": {
+        "systolic_bp": 61,
+        "diastolic_bp": 53,
+        "heart_rate": 128,
+        "respiratory_rate": 42,
+        "temperature": 35.2,
+        "spo2": 72
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857865Z"
+    },
+    {
+      "case_id": "high-032",
+      "patient_id": "c80249db-b954-473d-8ee3-8b2b9429c4f1",
+      "name": "Jessica Martinez",
+      "age": 59,
+      "gender": "female",
+      "chief_complaint": "severe headache",
+      "symptoms": [
+        "chest pain",
+        "dyspnea",
+        "diaphoresis"
+      ],
+      "vitals": {
+        "systolic_bp": 95,
+        "diastolic_bp": 57,
+        "heart_rate": 107,
+        "respiratory_rate": 23,
+        "temperature": 39.1,
+        "spo2": 88
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859246Z"
+    },
+    {
+      "case_id": "critical-018",
+      "patient_id": "02e054c2-2b4e-4709-b28f-241882dcce28",
+      "name": "Richard Rodriguez",
+      "age": 60,
+      "gender": "female",
+      "chief_complaint": "severe chest pain",
+      "symptoms": [
+        "unresponsive",
+        "seizure activity",
+        "postictal state"
+      ],
+      "vitals": {
+        "systolic_bp": 84,
+        "diastolic_bp": 42,
+        "heart_rate": 180,
+        "respiratory_rate": 38,
+        "temperature": 35.1,
+        "spo2": 71
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857807Z"
+    },
+    {
+      "case_id": "medium-032",
+      "patient_id": "7dde359d-5426-462e-919c-d10a77d22d74",
+      "name": "Barbara Brown",
+      "age": 38,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "fever",
+        "cough",
+        "malaise"
+      ],
+      "vitals": {
+        "systolic_bp": 161,
+        "diastolic_bp": 98,
+        "heart_rate": 105,
+        "respiratory_rate": 19,
+        "temperature": 38.5,
+        "spo2": 92
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860728Z"
+    },
+    {
+      "case_id": "low-044",
+      "patient_id": "37f36946-9aad-4232-b2c2-f34b30aeaea8",
+      "name": "Joseph Rodriguez",
+      "age": 49,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "sore throat",
+        "rhinorrhea",
+        "mild cough"
+      ],
+      "vitals": {
+        "systolic_bp": 128,
+        "diastolic_bp": 73,
+        "heart_rate": 70,
+        "respiratory_rate": 14,
+        "temperature": 37.4,
+        "spo2": 98
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862568Z"
+    },
+    {
+      "case_id": "medium-011",
+      "patient_id": "17c756be-4029-4ae7-99d1-a0fb42fa1992",
+      "name": "John Jones",
+      "age": 46,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "fever",
+        "cough",
+        "malaise"
+      ],
+      "vitals": {
+        "systolic_bp": 157,
+        "diastolic_bp": 67,
+        "heart_rate": 94,
+        "respiratory_rate": 19,
+        "temperature": 38.0,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859904Z"
+    },
+    {
+      "case_id": "low-031",
+      "patient_id": "b9d95d0a-fec4-45eb-8905-ef0afd0add5d",
+      "name": "Robert Hernandez",
+      "age": 47,
+      "gender": "female",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "sore throat",
+        "rhinorrhea",
+        "mild cough"
+      ],
+      "vitals": {
+        "systolic_bp": 111,
+        "diastolic_bp": 74,
+        "heart_rate": 85,
+        "respiratory_rate": 15,
+        "temperature": 37.2,
+        "spo2": 99
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862098Z"
+    },
+    {
+      "case_id": "high-008",
+      "patient_id": "18a741dc-2a23-4b57-b330-27aab4e1f94a",
+      "name": "Robert Miller",
+      "age": 49,
+      "gender": "male",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "severe headache",
+        "photophobia",
+        "neck stiffness"
+      ],
+      "vitals": {
+        "systolic_bp": 177,
+        "diastolic_bp": 113,
+        "heart_rate": 122,
+        "respiratory_rate": 22,
+        "temperature": 38.8,
+        "spo2": 89
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858416Z"
+    },
+    {
+      "case_id": "medium-014",
+      "patient_id": "e18105bb-1c30-42ae-918d-4322fd6c93c7",
+      "name": "Susan Brown",
+      "age": 63,
+      "gender": "male",
+      "chief_complaint": "chest discomfort",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 97,
+        "diastolic_bp": 97,
+        "heart_rate": 100,
+        "respiratory_rate": 21,
+        "temperature": 38.2,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860027Z"
+    },
+    {
+      "case_id": "low-001",
+      "patient_id": "9447be13-65ce-4701-a568-3de4dbbdebe4",
+      "name": "Susan Smith",
+      "age": 33,
+      "gender": "female",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "sore throat",
+        "rhinorrhea",
+        "mild cough"
+      ],
+      "vitals": {
+        "systolic_bp": 113,
+        "diastolic_bp": 85,
+        "heart_rate": 60,
+        "respiratory_rate": 17,
+        "temperature": 37.1,
+        "spo2": 99
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.860983Z"
+    },
+    {
+      "case_id": "low-005",
+      "patient_id": "b9fba5b1-7395-45d2-aeb5-1fe37491cf12",
+      "name": "Richard Thomas",
+      "age": 20,
+      "gender": "female",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 132,
+        "diastolic_bp": 84,
+        "heart_rate": 66,
+        "respiratory_rate": 12,
+        "temperature": 36.5,
+        "spo2": 96
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861117Z"
+    },
+    {
+      "case_id": "medium-037",
+      "patient_id": "fccf63a4-13bf-480a-a20d-829a8283a7dd",
+      "name": "John Williams",
+      "age": 60,
+      "gender": "male",
+      "chief_complaint": "joint pain",
+      "symptoms": [
+        "chest discomfort",
+        "mild dyspnea"
+      ],
+      "vitals": {
+        "systolic_bp": 153,
+        "diastolic_bp": 67,
+        "heart_rate": 105,
+        "respiratory_rate": 19,
+        "temperature": 38.0,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860920Z"
+    },
+    {
+      "case_id": "medium-031",
+      "patient_id": "1feb4e6a-41ab-42a0-b53f-79e6e050b3ec",
+      "name": "James Wilson",
+      "age": 54,
+      "gender": "female",
+      "chief_complaint": "fever",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 105,
+        "diastolic_bp": 99,
+        "heart_rate": 92,
+        "respiratory_rate": 20,
+        "temperature": 37.9,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860671Z"
+    },
+    {
+      "case_id": "medium-023",
+      "patient_id": "0e31ff43-474f-4083-9ef4-6324fb552392",
+      "name": "Patricia Gonzalez",
+      "age": 55,
+      "gender": "male",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "chest discomfort",
+        "mild dyspnea"
+      ],
+      "vitals": {
+        "systolic_bp": 97,
+        "diastolic_bp": 95,
+        "heart_rate": 100,
+        "respiratory_rate": 22,
+        "temperature": 38.4,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860404Z"
+    },
+    {
+      "case_id": "high-035",
+      "patient_id": "d106662b-a1d4-4756-b83b-7740eda321a5",
+      "name": "Mary Jones",
+      "age": 57,
+      "gender": "female",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "severe headache",
+        "photophobia",
+        "neck stiffness"
+      ],
+      "vitals": {
+        "systolic_bp": 193,
+        "diastolic_bp": 58,
+        "heart_rate": 120,
+        "respiratory_rate": 27,
+        "temperature": 38.8,
+        "spo2": 91
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859348Z"
+    },
+    {
+      "case_id": "medium-020",
+      "patient_id": "b7d81996-9c6a-48a8-aff9-1bae4eedb9d2",
+      "name": "Joseph Wilson",
+      "age": 57,
+      "gender": "female",
+      "chief_complaint": "joint pain",
+      "symptoms": [
+        "chest discomfort",
+        "mild dyspnea"
+      ],
+      "vitals": {
+        "systolic_bp": 97,
+        "diastolic_bp": 67,
+        "heart_rate": 98,
+        "respiratory_rate": 21,
+        "temperature": 38.3,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860290Z"
+    },
+    {
+      "case_id": "high-022",
+      "patient_id": "5d4460b7-45a9-4867-a67d-4b56c2a83e8c",
+      "name": "Jennifer Johnson",
+      "age": 60,
+      "gender": "female",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 93,
+        "diastolic_bp": 65,
+        "heart_rate": 123,
+        "respiratory_rate": 24,
+        "temperature": 39.4,
+        "spo2": 91
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858905Z"
+    },
+    {
+      "case_id": "critical-021",
+      "patient_id": "201100c5-87fb-4731-926e-299d934855b0",
+      "name": "Michael Hernandez",
+      "age": 71,
+      "gender": "male",
+      "chief_complaint": "respiratory failure",
+      "symptoms": [
+        "respiratory distress",
+        "severe dyspnea",
+        "accessory muscle use",
+        "tripod positioning"
+      ],
+      "vitals": {
+        "systolic_bp": 63,
+        "diastolic_bp": 53,
+        "heart_rate": 151,
+        "respiratory_rate": 44,
+        "temperature": 35.1,
+        "spo2": 88
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857898Z"
+    },
+    {
+      "case_id": "high-010",
+      "patient_id": "a584cc27-9bbf-4870-841a-074260a02526",
+      "name": "Jennifer Anderson",
+      "age": 57,
+      "gender": "male",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "abdominal pain",
+        "vomiting",
+        "fever"
+      ],
+      "vitals": {
+        "systolic_bp": 184,
+        "diastolic_bp": 112,
+        "heart_rate": 118,
+        "respiratory_rate": 25,
+        "temperature": 38.7,
+        "spo2": 88
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858478Z"
+    },
+    {
+      "case_id": "high-030",
+      "patient_id": "bd23a1f0-6f2a-4e09-95ab-2720761b5e29",
+      "name": "John Anderson",
+      "age": 48,
+      "gender": "female",
+      "chief_complaint": "palpitations",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 188,
+        "diastolic_bp": 59,
+        "heart_rate": 115,
+        "respiratory_rate": 24,
+        "temperature": 39.0,
+        "spo2": 90
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859181Z"
+    },
+    {
+      "case_id": "critical-016",
+      "patient_id": "54e96ffd-eff2-4908-a88d-41f9321c8c64",
+      "name": "Patricia Davis",
+      "age": 56,
+      "gender": "male",
+      "chief_complaint": "respiratory failure",
+      "symptoms": [
+        "unresponsive",
+        "seizure activity",
+        "postictal state"
+      ],
+      "vitals": {
+        "systolic_bp": 63,
+        "diastolic_bp": 38,
+        "heart_rate": 154,
+        "respiratory_rate": 27,
+        "temperature": 40.0,
+        "spo2": 73
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857742Z"
+    },
+    {
+      "case_id": "medium-018",
+      "patient_id": "293a58aa-59e3-4e42-8b49-e034ffb69773",
+      "name": "Elizabeth Smith",
+      "age": 47,
+      "gender": "male",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 103,
+        "diastolic_bp": 71,
+        "heart_rate": 98,
+        "respiratory_rate": 18,
+        "temperature": 38.2,
+        "spo2": 92
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860213Z"
+    },
+    {
+      "case_id": "critical-008",
+      "patient_id": "103092ae-17db-4afc-be3b-482e13be6324",
+      "name": "James Gonzalez",
+      "age": 59,
+      "gender": "female",
+      "chief_complaint": "cardiac arrest",
+      "symptoms": [
+        "altered mental status",
+        "severe hypotension",
+        "cyanosis"
+      ],
+      "vitals": {
+        "systolic_bp": 71,
+        "diastolic_bp": 42,
+        "heart_rate": 130,
+        "respiratory_rate": 27,
+        "temperature": 39.7,
+        "spo2": 73
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857474Z"
+    },
+    {
+      "case_id": "low-018",
+      "patient_id": "412f5e48-7649-477f-b349-6fb523cb2029",
+      "name": "Jennifer Jones",
+      "age": 26,
+      "gender": "female",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "rash",
+        "pruritus",
+        "no respiratory symptoms"
+      ],
+      "vitals": {
+        "systolic_bp": 130,
+        "diastolic_bp": 72,
+        "heart_rate": 81,
+        "respiratory_rate": 16,
+        "temperature": 36.9,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861604Z"
+    },
+    {
+      "case_id": "medium-021",
+      "patient_id": "733be0c6-28a8-4578-9c7d-9235a44a8eab",
+      "name": "Richard Johnson",
+      "age": 49,
+      "gender": "male",
+      "chief_complaint": "fever",
+      "symptoms": [
+        "abdominal pain",
+        "nausea",
+        "vomiting"
+      ],
+      "vitals": {
+        "systolic_bp": 101,
+        "diastolic_bp": 70,
+        "heart_rate": 105,
+        "respiratory_rate": 22,
+        "temperature": 38.0,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860326Z"
+    },
+    {
+      "case_id": "high-017",
+      "patient_id": "9dbb3465-ae69-4c2e-9c63-94fc50b3ae09",
+      "name": "David Garcia",
+      "age": 55,
+      "gender": "female",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "chest pain",
+        "dyspnea",
+        "diaphoresis"
+      ],
+      "vitals": {
+        "systolic_bp": 90,
+        "diastolic_bp": 59,
+        "heart_rate": 123,
+        "respiratory_rate": 26,
+        "temperature": 39.3,
+        "spo2": 91
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858731Z"
+    },
+    {
+      "case_id": "low-030",
+      "patient_id": "7cbee554-3733-4218-ba27-4a8669c91998",
+      "name": "Richard Johnson",
+      "age": 27,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "sore throat",
+        "rhinorrhea",
+        "mild cough"
+      ],
+      "vitals": {
+        "systolic_bp": 113,
+        "diastolic_bp": 82,
+        "heart_rate": 70,
+        "respiratory_rate": 16,
+        "temperature": 36.9,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862066Z"
+    },
+    {
+      "case_id": "low-020",
+      "patient_id": "451294f4-753d-4f4b-aa30-cdce9aef86c4",
+      "name": "James Garcia",
+      "age": 26,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "minor laceration",
+        "no active bleeding"
+      ],
+      "vitals": {
+        "systolic_bp": 112,
+        "diastolic_bp": 78,
+        "heart_rate": 90,
+        "respiratory_rate": 16,
+        "temperature": 36.7,
+        "spo2": 97
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861674Z"
+    },
+    {
+      "case_id": "critical-002",
+      "patient_id": "cc1b692d-fd0f-4866-ba42-a47e69d8f0fa",
+      "name": "William Smith",
+      "age": 62,
+      "gender": "male",
+      "chief_complaint": "severe trauma",
+      "symptoms": [
+        "unresponsive",
+        "seizure activity",
+        "postictal state"
+      ],
+      "vitals": {
+        "systolic_bp": 66,
+        "diastolic_bp": 42,
+        "heart_rate": 170,
+        "respiratory_rate": 43,
+        "temperature": 35.3,
+        "spo2": 83
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857283Z"
+    },
+    {
+      "case_id": "medium-006",
+      "patient_id": "d3f28a17-c982-4b03-afce-cc1bcb136f21",
+      "name": "William Gonzalez",
+      "age": 37,
+      "gender": "female",
+      "chief_complaint": "headache",
+      "symptoms": [
+        "chest discomfort",
+        "mild dyspnea"
+      ],
+      "vitals": {
+        "systolic_bp": 157,
+        "diastolic_bp": 73,
+        "heart_rate": 90,
+        "respiratory_rate": 20,
+        "temperature": 38.4,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859717Z"
+    },
+    {
+      "case_id": "medium-025",
+      "patient_id": "a9fd62ec-2d88-4840-9f91-7af53ae835b6",
+      "name": "Robert Rodriguez",
+      "age": 39,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "fever",
+        "cough",
+        "malaise"
+      ],
+      "vitals": {
+        "systolic_bp": 102,
+        "diastolic_bp": 66,
+        "heart_rate": 96,
+        "respiratory_rate": 20,
+        "temperature": 38.2,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860468Z"
+    },
+    {
+      "case_id": "medium-007",
+      "patient_id": "8bae38d9-2dc5-4e0f-8c24-4b290a71eed9",
+      "name": "Patricia Jones",
+      "age": 59,
+      "gender": "male",
+      "chief_complaint": "chest discomfort",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 157,
+        "diastolic_bp": 104,
+        "heart_rate": 97,
+        "respiratory_rate": 18,
+        "temperature": 38.4,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859750Z"
+    },
+    {
+      "case_id": "high-009",
+      "patient_id": "d416193e-eff8-48b8-a493-7e45f532efb1",
+      "name": "Richard Thomas",
+      "age": 75,
+      "gender": "male",
+      "chief_complaint": "palpitations",
+      "symptoms": [
+        "chest pain",
+        "dyspnea",
+        "diaphoresis"
+      ],
+      "vitals": {
+        "systolic_bp": 188,
+        "diastolic_bp": 119,
+        "heart_rate": 118,
+        "respiratory_rate": 25,
+        "temperature": 38.6,
+        "spo2": 92
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858446Z"
+    },
+    {
+      "case_id": "high-013",
+      "patient_id": "d20e4d6b-b687-4e92-afb3-f4d1f93a0b7b",
+      "name": "Michael Anderson",
+      "age": 66,
+      "gender": "female",
+      "chief_complaint": "palpitations",
+      "symptoms": [
+        "chest pain",
+        "dyspnea",
+        "diaphoresis"
+      ],
+      "vitals": {
+        "systolic_bp": 95,
+        "diastolic_bp": 58,
+        "heart_rate": 112,
+        "respiratory_rate": 23,
+        "temperature": 39.1,
+        "spo2": 91
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858574Z"
+    },
+    {
+      "case_id": "high-005",
+      "patient_id": "9584f646-54ea-4206-b279-cebf1a61fdf3",
+      "name": "Richard Davis",
+      "age": 67,
+      "gender": "male",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 87,
+        "diastolic_bp": 58,
+        "heart_rate": 125,
+        "respiratory_rate": 26,
+        "temperature": 39.0,
+        "spo2": 89
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858329Z"
+    },
+    {
+      "case_id": "medium-029",
+      "patient_id": "f95ab139-d13c-4014-bab2-1786d8fbd599",
+      "name": "Elizabeth Lopez",
+      "age": 63,
+      "gender": "female",
+      "chief_complaint": "fever",
+      "symptoms": [
+        "joint pain",
+        "swelling",
+        "limited mobility"
+      ],
+      "vitals": {
+        "systolic_bp": 153,
+        "diastolic_bp": 66,
+        "heart_rate": 104,
+        "respiratory_rate": 21,
+        "temperature": 37.8,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860603Z"
+    },
+    {
+      "case_id": "high-028",
+      "patient_id": "dfcfdac8-1868-4737-a527-a4da5d3039b9",
+      "name": "Mary Garcia",
+      "age": 69,
+      "gender": "female",
+      "chief_complaint": "palpitations",
+      "symptoms": [
+        "abdominal pain",
+        "vomiting",
+        "fever"
+      ],
+      "vitals": {
+        "systolic_bp": 176,
+        "diastolic_bp": 60,
+        "heart_rate": 123,
+        "respiratory_rate": 26,
+        "temperature": 38.6,
+        "spo2": 88
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859109Z"
+    },
+    {
+      "case_id": "high-001",
+      "patient_id": "da5dcb0c-90af-456b-b086-ff99ca9f6fe4",
+      "name": "Michael Lopez",
+      "age": 67,
+      "gender": "female",
+      "chief_complaint": "chest pain",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 198,
+        "diastolic_bp": 108,
+        "heart_rate": 111,
+        "respiratory_rate": 24,
+        "temperature": 39.4,
+        "spo2": 88
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858188Z"
+    },
+    {
+      "case_id": "low-035",
+      "patient_id": "385d495e-6e0f-43e2-b943-3e60335b5731",
+      "name": "Jessica Johnson",
+      "age": 31,
+      "gender": "male",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 110,
+        "diastolic_bp": 84,
+        "heart_rate": 64,
+        "respiratory_rate": 15,
+        "temperature": 36.8,
+        "spo2": 100
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862241Z"
+    },
+    {
+      "case_id": "high-004",
+      "patient_id": "cace83dd-ee97-462a-aa41-7286245510a6",
+      "name": "Barbara Davis",
+      "age": 55,
+      "gender": "male",
+      "chief_complaint": "severe headache",
+      "symptoms": [
+        "chest pain",
+        "dyspnea",
+        "diaphoresis"
+      ],
+      "vitals": {
+        "systolic_bp": 92,
+        "diastolic_bp": 63,
+        "heart_rate": 114,
+        "respiratory_rate": 26,
+        "temperature": 39.2,
+        "spo2": 92
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858297Z"
+    },
+    {
+      "case_id": "critical-001",
+      "patient_id": "d2d37dd0-ea9d-4aa3-b45b-f6daf4663087",
+      "name": "Mary Smith",
+      "age": 57,
+      "gender": "male",
+      "chief_complaint": "cardiac arrest",
+      "symptoms": [
+        "severe abdominal pain",
+        "hematemesis",
+        "melena",
+        "syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 80,
+        "diastolic_bp": 38,
+        "heart_rate": 133,
+        "respiratory_rate": 29,
+        "temperature": 35.0,
+        "spo2": 87
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857137Z"
+    },
+    {
+      "case_id": "high-034",
+      "patient_id": "bbdc5dd5-d329-434b-b94b-f0fa8f72e148",
+      "name": "Joseph Hernandez",
+      "age": 62,
+      "gender": "male",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "palpitations",
+        "lightheadedness",
+        "near-syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 184,
+        "diastolic_bp": 64,
+        "heart_rate": 120,
+        "respiratory_rate": 24,
+        "temperature": 38.9,
+        "spo2": 90
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859312Z"
+    },
+    {
+      "case_id": "medium-015",
+      "patient_id": "51df8312-ade1-4ff2-9933-2700ab868af9",
+      "name": "David Rodriguez",
+      "age": 36,
+      "gender": "female",
+      "chief_complaint": "chest discomfort",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 163,
+        "diastolic_bp": 101,
+        "heart_rate": 102,
+        "respiratory_rate": 21,
+        "temperature": 38.4,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860085Z"
+    },
+    {
+      "case_id": "low-017",
+      "patient_id": "4d470c31-6d60-4ccf-a70e-08f5881e4414",
+      "name": "James Jones",
+      "age": 44,
+      "gender": "female",
+      "chief_complaint": "rash",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 119,
+        "diastolic_bp": 82,
+        "heart_rate": 83,
+        "respiratory_rate": 15,
+        "temperature": 37.5,
+        "spo2": 99
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861558Z"
+    },
+    {
+      "case_id": "high-006",
+      "patient_id": "64904d3e-b953-41c5-8e85-966d4b95a803",
+      "name": "Joseph Jones",
+      "age": 62,
+      "gender": "female",
+      "chief_complaint": "chest pain",
+      "symptoms": [
+        "severe headache",
+        "photophobia",
+        "neck stiffness"
+      ],
+      "vitals": {
+        "systolic_bp": 95,
+        "diastolic_bp": 56,
+        "heart_rate": 121,
+        "respiratory_rate": 25,
+        "temperature": 38.7,
+        "spo2": 88
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858359Z"
+    },
+    {
+      "case_id": "low-039",
+      "patient_id": "90e3432f-564e-447f-ae35-898be710fe97",
+      "name": "Jessica Miller",
+      "age": 40,
+      "gender": "male",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 134,
+        "diastolic_bp": 74,
+        "heart_rate": 69,
+        "respiratory_rate": 17,
+        "temperature": 36.8,
+        "spo2": 95
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.862388Z"
+    },
+    {
+      "case_id": "critical-025",
+      "patient_id": "111bcfbc-1f6f-44f9-aad8-563d6d5e84e3",
+      "name": "Mary Smith",
+      "age": 75,
+      "gender": "female",
+      "chief_complaint": "respiratory failure",
+      "symptoms": [
+        "unresponsive",
+        "seizure activity",
+        "postictal state"
+      ],
+      "vitals": {
+        "systolic_bp": 81,
+        "diastolic_bp": 55,
+        "heart_rate": 179,
+        "respiratory_rate": 27,
+        "temperature": 40.3,
+        "spo2": 72
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.858005Z"
+    },
+    {
+      "case_id": "medium-035",
+      "patient_id": "6e2635a5-e4ec-486a-8f3f-ef0b0f431df6",
+      "name": "William Anderson",
+      "age": 48,
+      "gender": "male",
+      "chief_complaint": "fever",
+      "symptoms": [
+        "abdominal pain",
+        "nausea",
+        "vomiting"
+      ],
+      "vitals": {
+        "systolic_bp": 99,
+        "diastolic_bp": 102,
+        "heart_rate": 93,
+        "respiratory_rate": 22,
+        "temperature": 38.2,
+        "spo2": 92
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860846Z"
+    },
+    {
+      "case_id": "critical-023",
+      "patient_id": "69dbb41a-c69d-44f7-bd37-23c59724928c",
+      "name": "Barbara Smith",
+      "age": 60,
+      "gender": "female",
+      "chief_complaint": "severe trauma",
+      "symptoms": [
+        "unresponsive",
+        "seizure activity",
+        "postictal state"
+      ],
+      "vitals": {
+        "systolic_bp": 76,
+        "diastolic_bp": 43,
+        "heart_rate": 140,
+        "respiratory_rate": 37,
+        "temperature": 35.1,
+        "spo2": 79
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857952Z"
+    },
+    {
+      "case_id": "medium-016",
+      "patient_id": "70ef9b14-0485-4526-8b0e-85bba8668714",
+      "name": "David Brown",
+      "age": 33,
+      "gender": "female",
+      "chief_complaint": "joint pain",
+      "symptoms": [
+        "joint pain",
+        "swelling",
+        "limited mobility"
+      ],
+      "vitals": {
+        "systolic_bp": 99,
+        "diastolic_bp": 66,
+        "heart_rate": 101,
+        "respiratory_rate": 19,
+        "temperature": 38.1,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860126Z"
+    },
+    {
+      "case_id": "low-026",
+      "patient_id": "d2300dbe-eed3-4d61-adce-6716c79ce998",
+      "name": "Jessica Smith",
+      "age": 47,
+      "gender": "male",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 120,
+        "diastolic_bp": 80,
+        "heart_rate": 65,
+        "respiratory_rate": 15,
+        "temperature": 36.7,
+        "spo2": 99
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861924Z"
+    },
+    {
+      "case_id": "low-004",
+      "patient_id": "3cc6eff7-4f15-4bc9-8a7b-eac469a15231",
+      "name": "Jennifer Jones",
+      "age": 29,
+      "gender": "male",
+      "chief_complaint": "ankle sprain",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 114,
+        "diastolic_bp": 71,
+        "heart_rate": 70,
+        "respiratory_rate": 18,
+        "temperature": 36.9,
+        "spo2": 100
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861083Z"
+    },
+    {
+      "case_id": "medium-036",
+      "patient_id": "4384eb04-282d-4211-8047-bf796dca1a1c",
+      "name": "Elizabeth Davis",
+      "age": 45,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "chest discomfort",
+        "mild dyspnea"
+      ],
+      "vitals": {
+        "systolic_bp": 108,
+        "diastolic_bp": 72,
+        "heart_rate": 102,
+        "respiratory_rate": 22,
+        "temperature": 38.1,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860890Z"
+    },
+    {
+      "case_id": "high-015",
+      "patient_id": "8bf2cd21-594a-456f-95a0-c80c92d08b8f",
+      "name": "Susan Thomas",
+      "age": 65,
+      "gender": "male",
+      "chief_complaint": "chest pain",
+      "symptoms": [
+        "abdominal pain",
+        "vomiting",
+        "fever"
+      ],
+      "vitals": {
+        "systolic_bp": 95,
+        "diastolic_bp": 106,
+        "heart_rate": 116,
+        "respiratory_rate": 22,
+        "temperature": 39.0,
+        "spo2": 92
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858664Z"
+    },
+    {
+      "case_id": "high-020",
+      "patient_id": "1c65a480-89f0-45b0-bdd2-cdf5a4f0917a",
+      "name": "Michael Miller",
+      "age": 68,
+      "gender": "female",
+      "chief_complaint": "severe headache",
+      "symptoms": [
+        "palpitations",
+        "lightheadedness",
+        "near-syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 197,
+        "diastolic_bp": 114,
+        "heart_rate": 111,
+        "respiratory_rate": 24,
+        "temperature": 38.7,
+        "spo2": 88
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858827Z"
+    },
+    {
+      "case_id": "medium-008",
+      "patient_id": "de9a3ac5-6063-41b7-aaf6-a1953917e31e",
+      "name": "Robert Wilson",
+      "age": 53,
+      "gender": "male",
+      "chief_complaint": "chest discomfort",
+      "symptoms": [
+        "joint pain",
+        "swelling",
+        "limited mobility"
+      ],
+      "vitals": {
+        "systolic_bp": 159,
+        "diastolic_bp": 66,
+        "heart_rate": 94,
+        "respiratory_rate": 21,
+        "temperature": 38.4,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.859788Z"
+    },
+    {
+      "case_id": "medium-019",
+      "patient_id": "4c0bd5c7-2ba1-4c11-ac36-a570078803fa",
+      "name": "Elizabeth Martinez",
+      "age": 59,
+      "gender": "female",
+      "chief_complaint": "fever",
+      "symptoms": [
+        "headache",
+        "dizziness",
+        "fatigue"
+      ],
+      "vitals": {
+        "systolic_bp": 168,
+        "diastolic_bp": 66,
+        "heart_rate": 96,
+        "respiratory_rate": 21,
+        "temperature": 37.9,
+        "spo2": 93
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860250Z"
+    },
+    {
+      "case_id": "critical-004",
+      "patient_id": "d4403e91-1e90-406e-8cc6-28d15e2d090b",
+      "name": "Mary Davis",
+      "age": 73,
+      "gender": "female",
+      "chief_complaint": "severe chest pain",
+      "symptoms": [
+        "altered mental status",
+        "severe hypotension",
+        "cyanosis"
+      ],
+      "vitals": {
+        "systolic_bp": 77,
+        "diastolic_bp": 38,
+        "heart_rate": 178,
+        "respiratory_rate": 45,
+        "temperature": 40.1,
+        "spo2": 81
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.857356Z"
+    },
+    {
+      "case_id": "high-018",
+      "patient_id": "36f56cab-b3e6-4f47-ae12-e921dba77448",
+      "name": "Linda Thomas",
+      "age": 52,
+      "gender": "female",
+      "chief_complaint": "back pain",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 186,
+        "diastolic_bp": 113,
+        "heart_rate": 121,
+        "respiratory_rate": 23,
+        "temperature": 39.1,
+        "spo2": 88
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858763Z"
+    },
+    {
+      "case_id": "high-036",
+      "patient_id": "b90bb85e-896b-4a90-b47d-6fe0f7585ca9",
+      "name": "David Gonzalez",
+      "age": 47,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "back pain",
+        "hematuria",
+        "dysuria"
+      ],
+      "vitals": {
+        "systolic_bp": 86,
+        "diastolic_bp": 63,
+        "heart_rate": 118,
+        "respiratory_rate": 28,
+        "temperature": 39.2,
+        "spo2": 89
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.859386Z"
+    },
+    {
+      "case_id": "low-012",
+      "patient_id": "50bb3a84-5799-4d22-8947-ca15fe4a96bb",
+      "name": "William Davis",
+      "age": 41,
+      "gender": "male",
+      "chief_complaint": "minor injury",
+      "symptoms": [
+        "ankle sprain",
+        "mild swelling"
+      ],
+      "vitals": {
+        "systolic_bp": 121,
+        "diastolic_bp": 84,
+        "heart_rate": 78,
+        "respiratory_rate": 13,
+        "temperature": 37.3,
+        "spo2": 99
+      },
+      "expected_severity": "LOW",
+      "generated_at": "2026-03-20T09:32:49.861364Z"
+    },
+    {
+      "case_id": "high-012",
+      "patient_id": "d778c49e-599c-4598-989b-fdd218704de8",
+      "name": "Elizabeth Davis",
+      "age": 68,
+      "gender": "male",
+      "chief_complaint": "chest pain",
+      "symptoms": [
+        "palpitations",
+        "lightheadedness",
+        "near-syncope"
+      ],
+      "vitals": {
+        "systolic_bp": 185,
+        "diastolic_bp": 113,
+        "heart_rate": 107,
+        "respiratory_rate": 25,
+        "temperature": 38.8,
+        "spo2": 88
+      },
+      "expected_severity": "HIGH",
+      "generated_at": "2026-03-20T09:32:49.858542Z"
+    },
+    {
+      "case_id": "medium-017",
+      "patient_id": "49de361b-1385-459b-abe8-2ac2aff3f884",
+      "name": "Elizabeth Lopez",
+      "age": 60,
+      "gender": "male",
+      "chief_complaint": "abdominal pain",
+      "symptoms": [
+        "fever",
+        "cough",
+        "malaise"
+      ],
+      "vitals": {
+        "systolic_bp": 106,
+        "diastolic_bp": 104,
+        "heart_rate": 96,
+        "respiratory_rate": 19,
+        "temperature": 38.0,
+        "spo2": 94
+      },
+      "expected_severity": "MEDIUM",
+      "generated_at": "2026-03-20T09:32:49.860169Z"
+    },
+    {
+      "case_id": "critical-029",
+      "patient_id": "3a78c78a-504f-4f1b-9f6f-e1a908f16c70",
+      "name": "Richard Hernandez",
+      "age": 62,
+      "gender": "female",
+      "chief_complaint": "unresponsive",
+      "symptoms": [
+        "severe chest pain",
+        "shortness of breath",
+        "diaphoresis",
+        "nausea"
+      ],
+      "vitals": {
+        "systolic_bp": 72,
+        "diastolic_bp": 36,
+        "heart_rate": 147,
+        "respiratory_rate": 35,
+        "temperature": 39.8,
+        "spo2": 77
+      },
+      "expected_severity": "CRITICAL",
+      "generated_at": "2026-03-20T09:32:49.858122Z"
+    }
+  ]
+}

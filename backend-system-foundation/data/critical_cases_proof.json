@@ -1,0 +1,150 @@
+{
+    "generated_at":  "2026-03-20T15:39:11Z",
+    "description":  "Critical case pipeline proof — Sepsis, Cardiac Arrest, Stroke, Respiratory Failure",
+    "pipeline":  "ML Severity Engine -\u003e Scaledown Context Pruning -\u003e Gemini LLM Reasoning -\u003e Final Decision",
+    "gemini_status_note":  "Gemini free tier quota (20 req/day) exhausted by 150-case batch evaluation. Compression + ML tiers fully proven. Gemini reasoning confirmed working earlier (see determinism_proof.json). Quota resets at midnight UTC.",
+    "compression_proven":  true,
+    "ml_triage_proven":  true,
+    "gemini_proven_earlier":  true,
+    "cases":  [
+                  {
+                      "condition":  "Sepsis",
+                      "request_id":  "critical-sepsis-001",
+                      "risk_tier":  "CRITICAL",
+                      "confidence":  0.9,
+                      "gemini_reasoning":  false,
+                      "severity_justification":  "Vital signs indicate life-threatening condition requiring immediate intervention.",
+                      "recommended_actions":  [
+                                                  "Establish IV access immediately",
+                                                  "Administer supplemental oxygen",
+                                                  "Prepare crash cart / intubation equipment",
+                                                  "Notify attending physician STAT",
+                                                  "Continuous cardiac monitoring"
+                                              ],
+                      "reasoning_trace":  [
+                                              "Critical vital sign thresholds exceeded",
+                                              "Immediate intervention required to prevent deterioration",
+                                              "Safety override applied â?? escalated to CRITICAL"
+                                          ],
+                      "clinical_priority":  "IMMEDIATE",
+                      "estimated_wait_minutes":  0,
+                      "compression_stats":  {
+                                                "original_tokens":  1293,
+                                                "compressed_tokens":  432,
+                                                "reduction_percent":  66.6
+                                            },
+                      "latency_breakdown":  {
+                                                "ml_ms":  0.58,
+                                                "scaledown_ms":  1611.91,
+                                                "llm_ms":  384.15,
+                                                "total_ms":  1996.64,
+                                                "scaledown_fallback":  false,
+                                                "llm_fallback":  true
+                                            }
+                  },
+                  {
+                      "condition":  "Cardiac Arrest",
+                      "request_id":  "critical-cardiac-arrest-001",
+                      "risk_tier":  "CRITICAL",
+                      "confidence":  0.95,
+                      "gemini_reasoning":  false,
+                      "severity_justification":  "Vital signs indicate life-threatening condition requiring immediate intervention.",
+                      "recommended_actions":  [
+                                                  "Establish IV access immediately",
+                                                  "Administer supplemental oxygen",
+                                                  "Prepare crash cart / intubation equipment",
+                                                  "Notify attending physician STAT",
+                                                  "Continuous cardiac monitoring"
+                                              ],
+                      "reasoning_trace":  [
+                                              "Critical vital sign thresholds exceeded",
+                                              "Immediate intervention required to prevent deterioration",
+                                              "Safety override applied â?? escalated to CRITICAL"
+                                          ],
+                      "clinical_priority":  "IMMEDIATE",
+                      "estimated_wait_minutes":  0,
+                      "compression_stats":  {
+                                                "original_tokens":  1272,
+                                                "compressed_tokens":  428,
+                                                "reduction_percent":  66.4
+                                            },
+                      "latency_breakdown":  {
+                                                "ml_ms":  0.21,
+                                                "scaledown_ms":  1816.7,
+                                                "llm_ms":  180.69,
+                                                "total_ms":  1997.6,
+                                                "scaledown_fallback":  false,
+                                                "llm_fallback":  true
+                                            }
+                  },
+                  {
+                      "condition":  "Stroke",
+                      "request_id":  "critical-stroke-001",
+                      "risk_tier":  "HIGH",
+                      "confidence":  0.9,
+                      "gemini_reasoning":  false,
+                      "severity_justification":  "Significant abnormalities in vital signs or symptoms indicating urgent care needed.",
+                      "recommended_actions":  [
+                                                  "Administer pain management protocol",
+                                                  "Order STAT imaging (X-ray / CT)",
+                                                  "Notify attending physician within 15 minutes",
+                                                  "Establish IV access"
+                                              ],
+                      "reasoning_trace":  [
+                                              "Multiple abnormal vital signs detected",
+                                              "Symptom pattern consistent with urgent condition",
+                                              "Physician notification required within 15 minutes"
+                                          ],
+                      "clinical_priority":  "URGENT",
+                      "estimated_wait_minutes":  15,
+                      "compression_stats":  {
+                                                "original_tokens":  1322,
+                                                "compressed_tokens":  447,
+                                                "reduction_percent":  66.2
+                                            },
+                      "latency_breakdown":  {
+                                                "ml_ms":  0.24,
+                                                "scaledown_ms":  1702.76,
+                                                "llm_ms":  135.37,
+                                                "total_ms":  1838.37,
+                                                "scaledown_fallback":  false,
+                                                "llm_fallback":  true
+                                            }
+                  },
+                  {
+                      "condition":  "Respiratory Failure",
+                      "request_id":  "critical-resp-failure-001",
+                      "risk_tier":  "CRITICAL",
+                      "confidence":  0.95,
+                      "gemini_reasoning":  false,
+                      "severity_justification":  "Vital signs indicate life-threatening condition requiring immediate intervention.",
+                      "recommended_actions":  [
+                                                  "Establish IV access immediately",
+                                                  "Administer supplemental oxygen",
+                                                  "Prepare crash cart / intubation equipment",
+                                                  "Notify attending physician STAT",
+                                                  "Continuous cardiac monitoring"
+                                              ],
+                      "reasoning_trace":  [
+                                              "Critical vital sign thresholds exceeded",
+                                              "Immediate intervention required to prevent deterioration",
+                                              "Safety override applied â?? escalated to CRITICAL"
+                                          ],
+                      "clinical_priority":  "IMMEDIATE",
+                      "estimated_wait_minutes":  0,
+                      "compression_stats":  {
+                                                "original_tokens":  1297,
+                                                "compressed_tokens":  448,
+                                                "reduction_percent":  65.5
+                                            },
+                      "latency_breakdown":  {
+                                                "ml_ms":  0.14,
+                                                "scaledown_ms":  1749.75,
+                                                "llm_ms":  155.37,
+                                                "total_ms":  1905.26,
+                                                "scaledown_fallback":  false,
+                                                "llm_fallback":  true
+                                            }
+                  }
+              ]
+}
