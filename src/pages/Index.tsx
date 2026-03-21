@@ -642,7 +642,7 @@ const Index = () => {
                     <button
                       type="button"
                       onClick={(e) => { e.preventDefault(); removeFile(i); }}
-                      className="ml-1 rounded-full p-0.5 hover:bg-primary/20 text-primary/70 hover:text-primary"
+                      className="ml-1 flex items-center justify-center h-4 w-4 rounded hover:bg-primary/20 text-primary/70 hover:text-primary flex-shrink-0"
                       aria-label={`Remove ${f.name}`}
                     >
                       <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
