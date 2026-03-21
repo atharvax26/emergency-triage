@@ -68,10 +68,12 @@ def get_current_user(creds: HTTPAuthorizationCredentials = Depends(_bearer)):
 # ── In-memory user store (persisted to disk) ──────────────────────────────────
 _users: dict = _load_json(_USERS_FILE, {})
 
-# Add ml-pipeline to path so we can use SimplePredictor directly
-_ML_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "ml-pipeline", "src", "api")
-if _ML_PATH not in sys.path:
-    sys.path.insert(0, _ML_PATH)
+# Try local copy first (for Render/production), then ml-pipeline path (for local dev)
+_APP_DIR = os.path.dirname(__file__)
+_ML_PATH = os.path.join(_APP_DIR, "..", "..", "ml-pipeline", "src", "api")
+for _p in [_APP_DIR, _ML_PATH]:
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
 
 try:
     from simple_predictor import SimplePredictor
@@ -112,9 +114,20 @@ app = FastAPI(
 )
 
 # CORS
+_CORS_ORIGINS = os.getenv("CORS_ORIGINS", "")
+if _CORS_ORIGINS:
+    try:
+        import json as _json
+        _origins = _json.loads(_CORS_ORIGINS)
+    except Exception:
+        _origins = [o.strip() for o in _CORS_ORIGINS.split(",") if o.strip()]
+else:
+    _origins = ["http://localhost:3000", "http://localhost:5173", "http://localhost:8080"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173", "http://localhost:8080"],
+    allow_origins=_origins if _origins != ["*"] else ["*"],
+    allow_origin_regex=r"https://.*\.vercel\.app" if "*" not in _origins else None,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
