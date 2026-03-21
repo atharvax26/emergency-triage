@@ -124,11 +124,12 @@ if _CORS_ORIGINS:
 else:
     _origins = ["http://localhost:3000", "http://localhost:5173", "http://localhost:8080"]
 
+_wildcard = "*" in _origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=_origins if _origins != ["*"] else ["*"],
-    allow_origin_regex=r"https://.*\.vercel\.app" if "*" not in _origins else None,
-    allow_credentials=True,
+    allow_origins=_origins,
+    **({} if _wildcard else {"allow_origin_regex": r"https://.*\.vercel\.app"}),
+    allow_credentials=not _wildcard,
     allow_methods=["*"],
     allow_headers=["*"],
 )
