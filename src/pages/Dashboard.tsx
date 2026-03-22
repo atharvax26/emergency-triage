@@ -330,8 +330,8 @@ const Dashboard = () => {
     setActions((prev) => prev.map((a) => (a.id === id ? { ...a, checked: !a.checked } : a)));
 
   return (
-    <main id="main-content" className="container max-w-3xl py-8 space-y-6" role="main">
-      <div className="flex items-center justify-between">
+    <main id="main-content" className="container max-w-3xl py-6 px-3 sm:py-8 sm:px-6 space-y-6" role="main">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <Button variant="ghost" onClick={() => navigate("/")} className="h-10 text-base">
           <ArrowLeft className="mr-2 h-5 w-5" /> New Intake
         </Button>
