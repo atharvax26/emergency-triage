@@ -136,7 +136,7 @@ function OverviewDashboard() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 dash-stagger">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 dash-stagger">
               <div className="rounded-xl border bg-muted/30 px-4 py-4 dash-metric-tile dash-metric-tile-neutral dash-fade-up cursor-default">
                 <p className="text-xl font-black">{stats.avg_inference_time_ms}ms</p>
                 <p className="text-xs text-muted-foreground mt-1 font-medium">Avg ML Inference</p>
