@@ -468,7 +468,7 @@ class VitalSigns(BaseModel):
 class PatientData(BaseModel):
     vitals: VitalSigns
     age: int = Field(..., ge=0, le=120)
-    symptoms: Optional[list[str]] = None
+    symptoms: Optional[List[str]] = None
 
 class TriagePredictionRequest(BaseModel):
     patient_data: PatientData
