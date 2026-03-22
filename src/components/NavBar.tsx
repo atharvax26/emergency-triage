@@ -54,7 +54,7 @@ export function NavBar() {
           </div>
 
           <div className="flex items-center gap-1 sm:gap-2 shrink-0">
-            <ConnectionStatus />
+            <span className="hidden sm:flex"><ConnectionStatus /></span>
             <ThemeToggle />
             {user && (
               <div className="flex items-center gap-1 sm:gap-2">
