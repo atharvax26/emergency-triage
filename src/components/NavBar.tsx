@@ -32,7 +32,7 @@ export function NavBar() {
         <nav className="container flex h-14 items-center justify-between gap-2 px-3 sm:px-6 sm:h-16 sm:gap-8" role="navigation" aria-label="Main navigation">
           <div className="flex items-center gap-2 shrink-0">
             <Activity className="h-5 w-5 sm:h-7 sm:w-7 text-destructive" aria-hidden="true" />
-            <span className="text-sm sm:text-xl font-bold tracking-tight leading-tight">Emergency<br className="sm:hidden" /> Triage</span>
+            <span className="hidden sm:inline text-xl font-bold tracking-tight">Emergency Triage</span>
           </div>
 
           <div className="flex items-center gap-0.5 sm:gap-1 overflow-x-auto scrollbar-none">
