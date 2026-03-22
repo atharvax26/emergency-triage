@@ -174,20 +174,14 @@ async def reason(
     symptoms: list,
 ) -> dict:
     """
-    Call Gemini to produce structured clinical reasoning.
+    Call Gemini REST API directly (no google-genai package needed).
     Falls back to rule-based output if Gemini is unavailable.
-
-    Returns dict with:
-      severity_justification, recommended_actions, reasoning_trace,
-      clinical_priority, estimated_wait_minutes, gemini_reasoning (bool)
     """
     tier = risk_tier.upper()
     fallback = dict(_FALLBACK_REASONING.get(tier, _FALLBACK_REASONING["MEDIUM"]))
     fallback["gemini_reasoning"] = False
 
-    client = _get_client()
-    if client is None:
-        logger.warning("Gemini client unavailable — using rule-based fallback")
+    if not GEMINI_API_KEY:
         return fallback
 
     prompt = _build_prompt(
@@ -199,12 +193,20 @@ async def reason(
         symptoms=symptoms,
     )
 
+    url = f"https://generativelanguage.googleapis.com/v1beta/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+
     try:
-        response = client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=prompt,
-        )
-        raw = response.text.strip()
+        import httpx
+        async with httpx.AsyncClient(timeout=8.0) as client:
+            response = await client.post(
+                url,
+                json={"contents": [{"parts": [{"text": prompt}]}]},
+                headers={"Content-Type": "application/json"},
+            )
+            response.raise_for_status()
+            data = response.json()
+
+        raw = data["candidates"][0]["content"]["parts"][0]["text"].strip()
 
         # Strip markdown code fences if present
         if raw.startswith("```"):
@@ -215,7 +217,6 @@ async def reason(
 
         result = json.loads(raw)
 
-        # Validate required fields
         required = ["severity_justification", "recommended_actions", "reasoning_trace",
                     "clinical_priority", "estimated_wait_minutes"]
         for field in required:
@@ -233,4 +234,4 @@ async def reason(
 
 # Singleton check
 def is_available() -> bool:
-    return bool(GEMINI_API_KEY) and _get_client() is not None
+    return bool(GEMINI_API_KEY)
