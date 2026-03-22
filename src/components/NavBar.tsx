@@ -29,19 +29,19 @@ export function NavBar() {
       </a>
       
       <header className="sticky top-0 z-50 border-b bg-card">
-        <nav className="container flex h-16 items-center justify-between gap-8" role="navigation" aria-label="Main navigation">
-          <div className="flex items-center gap-3">
-            <Activity className="h-7 w-7 text-destructive" aria-hidden="true" />
-            <span className="text-xl font-bold tracking-tight">Emergency Triage</span>
+        <nav className="container flex h-14 items-center justify-between gap-2 px-3 sm:px-6 sm:h-16 sm:gap-8" role="navigation" aria-label="Main navigation">
+          <div className="flex items-center gap-2 shrink-0">
+            <Activity className="h-5 w-5 sm:h-7 sm:w-7 text-destructive" aria-hidden="true" />
+            <span className="text-sm sm:text-xl font-bold tracking-tight leading-tight">Emergency<br className="sm:hidden" /> Triage</span>
           </div>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-0.5 sm:gap-1 overflow-x-auto scrollbar-none">
             {links.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 className={cn(
-                  "rounded-md px-4 py-2 text-base font-medium",
+                  "rounded-md px-2 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-base font-medium whitespace-nowrap",
                   pathname === l.to
                     ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
@@ -53,12 +53,12 @@ export function NavBar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
             <ConnectionStatus />
             <ThemeToggle />
             {user && (
-              <div className="flex items-center gap-2">
-                <Badge variant="outline" className="text-xs capitalize">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <Badge variant="outline" className="text-xs capitalize hidden sm:inline-flex">
                   {user.role}
                 </Badge>
                 <Button variant="ghost" size="icon" onClick={logout} title="Logout" aria-label="Logout">

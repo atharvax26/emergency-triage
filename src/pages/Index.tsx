@@ -375,8 +375,8 @@ const Index = () => {
       
       <main id="main-content" className="container max-w-2xl py-8" role="main">
         {/* Header with Emergency Button */}
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-3xl font-bold">Patient Intake</h1>
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold">Patient Intake</h1>
           
           {canActivateEmergency && (
             <Button

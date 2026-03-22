@@ -161,9 +161,9 @@ const Queue = () => {
 
   return (
     <main id="main-content" className="container max-w-6xl py-8 space-y-6" role="main">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h1 className="text-3xl font-bold">Patient Queue</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold">Patient Queue</h1>
           <p className="text-muted-foreground mt-1">
             {loading ? "Loading..." : error ? "Error loading queue"
               : `${totalWaiting} patients waiting • ${criticalCount} critical • ${highCount} high priority`}

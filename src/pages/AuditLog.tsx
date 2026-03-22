@@ -124,8 +124,8 @@ const AuditLog = () => {
 
   return (
     <main className="container py-8">
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Audit Log</h1>
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <h1 className="text-2xl sm:text-3xl font-bold">Audit Log</h1>
         <div className="flex items-center gap-3 text-sm text-muted-foreground">
           <button
             onClick={() => setClearConfirm(true)}
@@ -179,8 +179,8 @@ const AuditLog = () => {
         </Card>
       )}
 
-      <div className="rounded-lg border">
-        <Table>
+      <div className="rounded-lg border overflow-x-auto">
+        <Table className="min-w-[640px]">
           <TableHeader>
             <TableRow>
               <TableHead>Timestamp</TableHead>

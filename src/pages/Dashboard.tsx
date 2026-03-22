@@ -60,10 +60,10 @@ function OverviewDashboard() {
   const critical = waiting.filter((e) => e.severity === "critical");
 
   return (
-    <main id="main-content" className="container max-w-5xl py-8 space-y-6 dash-animate" role="main">
-      <div className="flex items-center justify-between dash-fade-up">
+    <main id="main-content" className="container max-w-5xl py-6 px-3 sm:py-8 sm:px-6 space-y-6 dash-animate" role="main">
+      <div className="flex flex-wrap items-start justify-between gap-3 dash-fade-up">
         <div>
-          <h1 className="text-3xl font-bold">Dashboard</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold">Dashboard</h1>
           <p className="text-muted-foreground mt-1">Live overview of the emergency department</p>
         </div>
         <div className="flex items-center gap-2">
