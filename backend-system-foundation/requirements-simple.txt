@@ -10,7 +10,7 @@ passlib[bcrypt]==1.7.4
 bcrypt==4.0.1
 python-multipart>=0.0.9
 python-dotenv>=1.0.0
-google-genai>=1.0.0
+# google-genai omitted — slow startup on Render free tier; gemini_reasoner.py falls back to rule-based
 
 # Document extraction (PDF, DOCX)
 PyMuPDF>=1.23.0
