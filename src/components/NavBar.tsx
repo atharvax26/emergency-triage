@@ -35,13 +35,13 @@ export function NavBar() {
             <span className="hidden sm:inline text-xl font-bold tracking-tight">Emergency Triage</span>
           </div>
 
-          <div className="flex flex-1 items-center justify-around">
+          <div className="flex items-center justify-center gap-1">
             {links.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 className={cn(
-                  "flex-1 text-center rounded-md px-1 py-1.5 text-xs sm:px-3 sm:py-2 sm:text-sm font-medium",
+                  "rounded-md px-2.5 py-1.5 text-xs sm:px-3 sm:py-2 sm:text-sm font-medium whitespace-nowrap",
                   pathname === l.to
                     ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
