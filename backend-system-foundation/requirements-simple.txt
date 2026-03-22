@@ -1,16 +1,16 @@
-# Minimal requirements - pydantic v1 only (no Rust/pydantic-core compilation)
-fastapi==0.100.1
-uvicorn[standard]==0.23.2
-pydantic==1.10.13
-email-validator==2.0.0
-httpx==0.24.1
+# Requirements compatible with Python 3.14 on Render
+# pydantic v2 has pre-built wheels — no Rust compilation needed
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.0.0
+email-validator>=2.0.0
+httpx>=0.27.0
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 bcrypt==4.0.1
-python-multipart==0.0.6
-python-dotenv==1.0.0
-# google-genai omitted — requires pydantic>=2.9 (Rust build) and httpx>=0.28
-# gemini_reasoner.py imports it lazily and falls back to rule-based if unavailable
+python-multipart>=0.0.9
+python-dotenv>=1.0.0
+# google-genai omitted — gemini_reasoner.py falls back to rule-based if unavailable
 
 # Document extraction (PDF, DOCX)
 PyMuPDF>=1.23.0

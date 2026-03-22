@@ -687,7 +687,7 @@ async def predict_triage(request: TriagePredictionRequest):
             async with httpx.AsyncClient(timeout=0.5) as client:
                 response = await client.post(
                     f"{_ML_SERVICE_URL}/v1/predict",
-                    json=request.dict(),
+                    json=request.model_dump(),
                     headers={"X-API-Key": _ML_API_KEY}
                 )
                 response.raise_for_status()
