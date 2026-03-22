@@ -160,7 +160,7 @@ const Queue = () => {
   const totalWaiting = patients.filter(p => p.status === "waiting").length;
 
   return (
-    <main id="main-content" className="container max-w-6xl py-8 space-y-6" role="main">
+    <main id="main-content" className="container max-w-6xl py-6 px-3 sm:py-8 sm:px-6 space-y-6" role="main">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold">Patient Queue</h1>
@@ -246,72 +246,76 @@ const Queue = () => {
           return (
             <div key={patient.id} className="space-y-2">
               <Card className={patient.status === "in-progress" ? "border-primary" : ""}>
-                <CardContent className="pt-6">
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-4 flex-1">
-                      <div className="flex flex-col items-center min-w-[80px]">
+                <CardContent className="pt-4 pb-4">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                    {/* Left: severity + patient info */}
+                    <div className="flex items-center gap-3 flex-1 min-w-0">
+                      <div className="flex flex-col items-center shrink-0">
                         <span className={`inline-flex items-center rounded-md px-3 py-1 text-sm font-bold ${sev.className}`}>
                           {sev.label}
                         </span>
                         <span className="text-xs text-muted-foreground mt-1">{patient.patient_id.slice(0, 8)}</span>
                       </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-1">
-                          <h3 className="text-lg font-bold">{patient.name}</h3>
-                          <Badge variant={patient.status === "in-progress" ? "default" : "outline"} className="font-medium">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-2 mb-1">
+                          <h3 className="text-base font-bold">{patient.name}</h3>
+                          <Badge variant={patient.status === "in-progress" ? "default" : "outline"} className="font-medium text-xs">
                             {patient.status === "in-progress" ? "In Progress" : "Waiting"}
                           </Badge>
                           {overrideLoggedIds.has(patient.id) && (
-                            <Badge variant="outline" className="text-green-600 border-green-600 font-medium">
+                            <Badge variant="outline" className="text-green-600 border-green-600 font-medium text-xs">
                               Override Logged
                             </Badge>
                           )}
                         </div>
-                        <p className="text-sm text-muted-foreground">Age {patient.age} • {patient.chief_complaint}</p>
+                        <p className="text-sm text-muted-foreground truncate">Age {patient.age} • {patient.chief_complaint}</p>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-6 text-sm">
-                      <div className="text-center">
-                        <p className="text-muted-foreground">Arrival</p>
-                        <p className="font-bold">{arrivalTime}</p>
-                      </div>
-                      <div className="text-center">
-                        <div className="flex items-center gap-1 justify-center">
-                          <Clock className="h-4 w-4 text-muted-foreground" />
-                          <p className="text-muted-foreground">Wait</p>
+                    {/* Bottom row on mobile: arrival + wait + button */}
+                    <div className="flex items-center justify-between gap-3 sm:gap-6">
+                      <div className="flex items-center gap-4 text-sm">
+                        <div className="text-center">
+                          <p className="text-muted-foreground text-xs">Arrival</p>
+                          <p className="font-bold">{arrivalTime}</p>
                         </div>
-                        <p className={`font-bold tabular-nums ${mins > 30 ? "text-red-600" : mins > 15 ? "text-orange-500" : ""}`}>
-                          {waitDisplay}
-                        </p>
+                        <div className="text-center">
+                          <div className="flex items-center gap-1 justify-center">
+                            <Clock className="h-3.5 w-3.5 text-muted-foreground" />
+                            <p className="text-muted-foreground text-xs">Wait</p>
+                          </div>
+                          <p className={`font-bold tabular-nums ${mins > 30 ? "text-red-600" : mins > 15 ? "text-orange-500" : ""}`}>
+                            {waitDisplay}
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="flex items-center gap-2">
-                      {canOverride && patient.status === "in-progress" && (
-                        <Button
-                          variant="outline"
-                          size="lg"
-                          className="h-14 px-5 text-base font-semibold border-severity-high text-severity-high hover:bg-severity-high hover:text-white"
-                          onClick={() => setOverridingPatientId(isOverriding ? null : patient.id)}
-                        >
-                          <AlertTriangle className="h-4 w-4 mr-1.5" />
-                          {isOverriding ? "Cancel" : "Override"}
-                        </Button>
-                      )}
-                      {canStartTriage && (
-                        <Button
-                          variant={patient.severity === "critical" ? "destructive" : "default"}
-                          size="lg"
-                          className="h-14 px-8 text-lg font-bold min-w-[140px]"
-                          disabled={isUpdating}
-                          onClick={() => handleStatusToggle(patient)}
-                        >
-                          {isUpdating
-                            ? <RefreshCw style={{ animation: "queue-spin 0.7s linear infinite" }} className="h-5 w-5 allow-animation" />
-                            : patient.status === "in-progress" ? "Complete" : "Start Triage"}
-                        </Button>
-                      )}
+                      <div className="flex items-center gap-2">
+                        {canOverride && patient.status === "in-progress" && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="h-10 px-3 text-sm font-semibold border-severity-high text-severity-high hover:bg-severity-high hover:text-white"
+                            onClick={() => setOverridingPatientId(isOverriding ? null : patient.id)}
+                          >
+                            <AlertTriangle className="h-4 w-4 mr-1" />
+                            {isOverriding ? "Cancel" : "Override"}
+                          </Button>
+                        )}
+                        {canStartTriage && (
+                          <Button
+                            variant={patient.severity === "critical" ? "destructive" : "default"}
+                            size="sm"
+                            className="h-10 px-4 text-sm font-bold"
+                            disabled={isUpdating}
+                            onClick={() => handleStatusToggle(patient)}
+                          >
+                            {isUpdating
+                              ? <RefreshCw style={{ animation: "queue-spin 0.7s linear infinite" }} className="h-4 w-4 allow-animation" />
+                              : patient.status === "in-progress" ? "Complete" : "Start Triage"}
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </CardContent>
