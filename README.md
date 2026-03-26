@@ -21,6 +21,26 @@
 
 </div>
 
+## 🌍 Live Demo
+
+| | URL |
+|:---|:---|
+| 🖥️ **Frontend** | [emergency-triage-one.vercel.app](https://emergency-triage-one.vercel.app) |
+| ⚙️ **Backend API** | [emergency-triage-nnbv.onrender.com](https://emergency-triage-nnbv.onrender.com) |
+
+> ⚠️ **Cold Start Warning — Please Read Before Demoing**
+>
+> The backend is hosted on **Render's free tier**, which automatically spins down the server after ~15 minutes of inactivity.
+> The **first request after a period of inactivity can take 50 seconds or more** to respond — this is normal and expected behaviour on the free plan.
+>
+> **What you'll see:** The frontend may show "Disconnected" or appear to hang briefly on first load.
+> **What to do:** Wait ~60 seconds for the backend to wake up, then refresh. All subsequent requests will be fast.
+>
+> For a live demo or hackathon presentation, open the backend health check URL a minute before presenting:
+> [`https://emergency-triage-nnbv.onrender.com/health`](https://emergency-triage-nnbv.onrender.com/health)
+
+---
+
 ## 🎯 The Problem We Solved
 
 <table>
