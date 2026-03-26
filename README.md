@@ -293,10 +293,13 @@ This is not a demo — it is a production-grade system with:
 ```
 emergency-triage/                  # React frontend
 ├── src/
-│   ├── components/                # UI components (NavBar, OverridePanel, etc.)
-│   ├── hooks/                     # Custom hooks (auth, API, speech)
-│   ├── lib/                       # API client, permissions, mock data
-│   └── pages/                     # Login, Index (intake), Dashboard, Queue, AuditLog
+│   ├── components/                # UI components (NavBar, OverridePanel, CompressionCharts, etc.)
+│   ├── hooks/                     # Custom hooks (auth, API, speech, theme, mobile)
+│   ├── lib/                       # API client, permissions, mock data, utils
+│   ├── pages/                     # Login, Index (intake), Dashboard, Queue, AuditLog, NotFound
+│   └── test/                      # Test setup
+├── vercel.json                    # SPA rewrite rules for Vercel deployment
+└── public/                        # Static assets
 
 backend-system-foundation/         # FastAPI backend
 ├── app/
@@ -305,15 +308,27 @@ backend-system-foundation/         # FastAPI backend
 │   ├── models/                    # SQLAlchemy ORM models
 │   ├── schemas/                   # Pydantic request/response schemas
 │   ├── middleware/                 # Auth, rate limiting, audit middleware
+│   ├── cache/                     # Redis client and caching layer
+│   ├── database/                  # DB connection, models, result store
+│   ├── utils/                     # Shared utility helpers
 │   ├── scaledown_pruner.py        # Scaledown context pruning integration
-│   ├── gemini_reasoner.py         # Gemini LLM reasoning layer
+│   ├── gemini_reasoner.py         # Gemini LLM reasoning layer (REST API via httpx)
+│   ├── simple_predictor.py        # ML severity classifier (scikit-learn)
+│   ├── config.py                  # App configuration and env vars
+│   ├── dependencies.py            # FastAPI dependency injection
 │   └── main_simple.py             # App entry point (no Docker required)
 ├── data/
 │   ├── compression_evaluation.json  # 150-case compression results
 │   ├── validation_report.json       # 150-case pipeline validation
 │   ├── determinism_proof.json       # Determinism verification
 │   ├── critical_cases_proof.json    # Critical condition test results
-│   └── metrics.json                 # Per-case latency + compression metrics
+│   ├── metrics.json                 # Per-case latency + compression metrics
+│   ├── synthetic_dataset.json       # Generated synthetic patient dataset
+│   ├── patients.json                # Persistent patient store (JSON fallback)
+│   ├── queue.json                   # Persistent queue store (JSON fallback)
+│   ├── audit.json                   # Persistent audit log (JSON fallback)
+│   ├── users.json                   # User credentials store
+│   └── charts/                      # Visual evidence charts (PNG)
 └── tests/                           # Unit + integration tests
 ```
 
