@@ -1,0 +1,157 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  IMAGE_NAME: emergency-triage-backend
+  PYTHON_VERSION: "3.11"
+  NODE_VERSION: "20"
+
+jobs:
+
+  # ──────────────────────────────────────────────────────────────────
+  # Job 1: Frontend — lint, type-check, build, unit tests
+  # ──────────────────────────────────────────────────────────────────
+  frontend:
+    name: Frontend (Node ${{ env.NODE_VERSION }})
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint (ESLint)
+        run: npm run lint
+
+      - name: Type-check + build
+        run: npm run build
+
+      - name: Unit tests (Vitest)
+        run: npm run test
+
+  # ──────────────────────────────────────────────────────────────────
+  # Job 2: Backend — pytest unit suite with coverage
+  # ──────────────────────────────────────────────────────────────────
+  backend:
+    name: Backend (Python ${{ env.PYTHON_VERSION }})
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: triage_db
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+      redis:
+        image: redis:7-alpine
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 6379:6379
+
+    defaults:
+      run:
+        working-directory: backend
+
+    env:
+      ENVIRONMENT: dev
+      DEBUG: "true"
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/triage_db
+      REDIS_URL: redis://localhost:6379/0
+      JWT_SECRET_KEY: ci-test-secret-key-that-is-long-enough-44c
+      JWT_ALGORITHM: HS256
+      ENFORCE_HTTPS: "false"
+      LOG_LEVEL: INFO
+      GEMINI_API_KEY: placeholder-not-used-in-unit-tests
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: backend/requirements-dev.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run unit tests with coverage
+        run: |
+          pytest tests/unit/ tests/test_health.py \
+            -v --tb=short \
+            --override-ini="addopts=" \
+            --cov=app \
+            --cov-report=term-missing \
+            --cov-report=xml:coverage.xml
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: backend-coverage
+          path: backend/coverage.xml
+
+  # ──────────────────────────────────────────────────────────────────
+  # Job 3: Docker — build image and verify app imports cleanly
+  # ──────────────────────────────────────────────────────────────────
+  docker-build:
+    name: Docker Build & Smoke Test
+    runs-on: ubuntu-latest
+    needs: [frontend, backend]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: |
+          docker build \
+            --tag $IMAGE_NAME:${{ github.sha }} \
+            --tag $IMAGE_NAME:latest \
+            ./backend
+
+      - name: Verify app imports cleanly
+        run: |
+          docker run --rm \
+            -e DATABASE_URL=postgresql://postgres:postgres@localhost:5432/triage_db \
+            -e REDIS_URL=redis://localhost:6379/0 \
+            -e JWT_SECRET_KEY=ci-test-secret-key-that-is-long-enough-44c \
+            -e JWT_ALGORITHM=HS256 \
+            -e ENVIRONMENT=dev \
+            -e DEBUG=true \
+            -e GEMINI_API_KEY=placeholder \
+            $IMAGE_NAME:${{ github.sha }} \
+            python -c "
+          from app.config import settings
+          from app.main import app
+          assert app is not None
+          print('Docker image verified — app imports OK')
+          print(f'  App: {settings.APP_NAME} v{settings.APP_VERSION}')
+          "

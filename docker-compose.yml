@@ -1,0 +1,82 @@
+version: "3.9"
+
+# Local development stack: FastAPI backend + PostgreSQL + Redis
+# Usage:
+#   docker compose up --build          # first run
+#   docker compose up                  # subsequent runs
+#   docker compose down -v             # tear down including volumes
+
+services:
+
+  # ── FastAPI application ────────────────────────────────────────────
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - "8000:8000"
+    environment:
+      ENVIRONMENT: dev
+      DEBUG: "true"
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/triage_db
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET_KEY: local-dev-secret-key-please-change-before-prod
+      JWT_ALGORITHM: HS256
+      CORS_ORIGINS: '["http://localhost:3000","http://localhost:5173","http://localhost:8000"]'
+      LOG_LEVEL: INFO
+      LOG_FORMAT: json
+      ENFORCE_HTTPS: "false"
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-your-gemini-api-key-here}
+      SCALEDOWN_API_KEY: ${SCALEDOWN_API_KEY:-your-scaledown-api-key-here}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - "CMD-SHELL"
+        - "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health')\""
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+  # ── PostgreSQL 15 ─────────────────────────────────────────────────
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: triage_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d triage_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+
+  # ── Redis 7 ───────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
